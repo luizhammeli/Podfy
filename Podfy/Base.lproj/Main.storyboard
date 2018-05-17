@@ -148,17 +148,17 @@
             </objects>
             <point key="canvasLocation" x="1074.375" y="132.04225352112675"/>
         </scene>
-        <!--View Controller-->
+        <!--Search-->
         <scene sceneID="OB7-88-hSC">
             <objects>
                 <viewController id="Hrw-su-znp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AhN-Zh-g77">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="7He-w8-7Jv"/>
                     </view>
-                    <navigationItem key="navigationItem" id="p1H-zH-UPx"/>
+                    <navigationItem key="navigationItem" title="Search" id="p1H-zH-UPx"/>
                     <connections>
                         <segue destination="5VD-WZ-uGl" kind="show" identifier="goToEpisodes" id="iIt-Vy-Qed"/>
                     </connections>
@@ -172,7 +172,7 @@
             <objects>
                 <viewController id="5VD-WZ-uGl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VOq-WL-dbK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ao9-25-3Bi"/>
@@ -182,17 +182,17 @@
             </objects>
             <point key="canvasLocation" x="5558" y="186"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites-->
         <scene sceneID="bUG-vS-4jn">
             <objects>
                 <viewController id="9uy-Lr-P7o" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BSc-W8-K6i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rG0-IT-Bfi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fkS-3K-3IN">
+                    <navigationItem key="navigationItem" title="Favorites" id="fkS-3K-3IN">
                         <barButtonItem key="rightBarButtonItem" image="gear" id="2jL-rs-Oqa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
@@ -440,16 +440,19 @@
             </objects>
             <point key="canvasLocation" x="-79" y="133"/>
         </scene>
-        <!--Favoritos-->
+        <!--Favorites-->
         <scene sceneID="lgZ-8B-P9b">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ucy-lU-TCa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favoritos" image="like-unselected" selectedImage="icons8-gostar-filled-50" id="lSF-sq-SNr"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="like-unselected" selectedImage="icons8-gostar-filled-50" id="lSF-sq-SNr"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9NG-uv-LOO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9NG-uv-LOO">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -460,16 +463,22 @@
             </objects>
             <point key="canvasLocation" x="3356" y="-232"/>
         </scene>
-        <!--Buscar-->
+        <!--Search-->
         <scene sceneID="nad-eb-uPj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MtM-PG-E8f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Buscar" image="search-unselected" selectedImage="search" id="VEP-Vf-zCF"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search-unselected" selectedImage="search" id="VEP-Vf-zCF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eQ9-k0-s9h">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="eQ9-k0-s9h">
+                        <rect key="frame" x="0.0" y="20" width="320" height="93"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -493,6 +502,6 @@
         <image name="user-icon" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hgs-Iv-f5n"/>
+        <segue reference="iIt-Vy-Qed"/>
     </inferredMetricsTieBreakers>
 </document>
