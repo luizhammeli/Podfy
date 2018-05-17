@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3849829120ADCACD00224AFC /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829020ADCACD00224AFC /* UITextFieldExtensions.swift */; };
+		3849829320ADCCA100224AFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3849829220ADCCA100224AFC /* GoogleService-Info.plist */; };
+		3849829520AE115E00224AFC /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829420AE115E00224AFC /* UIButtonExtensions.swift */; };
+		3849829720AE12B800224AFC /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829620AE12B800224AFC /* UIColorExtensions.swift */; };
 		38FB03A320ACC6C000723554 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB03A220ACC6C000723554 /* AppDelegate.swift */; };
-		38FB03A520ACC6C000723554 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB03A420ACC6C000723554 /* ViewController.swift */; };
+		38FB03A520ACC6C000723554 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB03A420ACC6C000723554 /* LoginViewController.swift */; };
 		38FB03A820ACC6C000723554 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03A620ACC6C000723554 /* Main.storyboard */; };
 		38FB03AA20ACC6C200723554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03A920ACC6C200723554 /* Assets.xcassets */; };
 		38FB03AD20ACC6C200723554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03AB20ACC6C200723554 /* LaunchScreen.storyboard */; };
+		7CACC3D03DC74701961F8148 /* Pods_Podfy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D936E880CA515CB384FB34 /* Pods_Podfy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3849829020ADCACD00224AFC /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		3849829220ADCCA100224AFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3849829420AE115E00224AFC /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		3849829620AE12B800224AFC /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		38FB039F20ACC6C000723554 /* Podfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FB03A220ACC6C000723554 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38FB03A420ACC6C000723554 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38FB03A420ACC6C000723554 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38FB03A720ACC6C000723554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38FB03A920ACC6C200723554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38FB03AC20ACC6C200723554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38FB03AE20ACC6C200723554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		566E8005BDDF5C918C215E1F /* Pods-Podfy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podfy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Podfy/Pods-Podfy.debug.xcconfig"; sourceTree = "<group>"; };
+		6D9969B2083612C8E9C873AB /* Pods-Podfy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podfy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podfy/Pods-Podfy.release.xcconfig"; sourceTree = "<group>"; };
+		76D936E880CA515CB384FB34 /* Pods_Podfy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podfy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CACC3D03DC74701961F8148 /* Pods_Podfy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20A686DB6BD8645E6DEE1927 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76D936E880CA515CB384FB34 /* Pods_Podfy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3849828F20ADCAAB00224AFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3849829020ADCACD00224AFC /* UITextFieldExtensions.swift */,
+				3849829420AE115E00224AFC /* UIButtonExtensions.swift */,
+				3849829620AE12B800224AFC /* UIColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		38FB039620ACC6C000723554 = {
 			isa = PBXGroup;
 			children = (
 				38FB03A120ACC6C000723554 /* Podfy */,
 				38FB03A020ACC6C000723554 /* Products */,
+				772D194AB1EAECC2C1BCFF8D /* Pods */,
+				20A686DB6BD8645E6DEE1927 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +87,25 @@
 		38FB03A120ACC6C000723554 /* Podfy */ = {
 			isa = PBXGroup;
 			children = (
+				3849828F20ADCAAB00224AFC /* Extensions */,
 				38FB03A220ACC6C000723554 /* AppDelegate.swift */,
-				38FB03A420ACC6C000723554 /* ViewController.swift */,
+				38FB03A420ACC6C000723554 /* LoginViewController.swift */,
 				38FB03A620ACC6C000723554 /* Main.storyboard */,
 				38FB03A920ACC6C200723554 /* Assets.xcassets */,
 				38FB03AB20ACC6C200723554 /* LaunchScreen.storyboard */,
 				38FB03AE20ACC6C200723554 /* Info.plist */,
+				3849829220ADCCA100224AFC /* GoogleService-Info.plist */,
 			);
 			path = Podfy;
+			sourceTree = "<group>";
+		};
+		772D194AB1EAECC2C1BCFF8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				566E8005BDDF5C918C215E1F /* Pods-Podfy.debug.xcconfig */,
+				6D9969B2083612C8E9C873AB /* Pods-Podfy.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38FB03B120ACC6C200723554 /* Build configuration list for PBXNativeTarget "Podfy" */;
 			buildPhases = (
+				36C565F740ADD031B511FE53 /* [CP] Check Pods Manifest.lock */,
 				38FB039B20ACC6C000723554 /* Sources */,
 				38FB039C20ACC6C000723554 /* Frameworks */,
 				38FB039D20ACC6C000723554 /* Resources */,
+				4FA48F0EC36AFF934F36E368 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38FB03AD20ACC6C200723554 /* LaunchScreen.storyboard in Resources */,
+				3849829320ADCCA100224AFC /* GoogleService-Info.plist in Resources */,
 				38FB03AA20ACC6C200723554 /* Assets.xcassets in Resources */,
 				38FB03A820ACC6C000723554 /* Main.storyboard in Resources */,
 			);
@@ -130,12 +177,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36C565F740ADD031B511FE53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Podfy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FA48F0EC36AFF934F36E368 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Podfy/Pods-Podfy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Podfy/Pods-Podfy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38FB039B20ACC6C000723554 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38FB03A520ACC6C000723554 /* ViewController.swift in Sources */,
+				3849829120ADCACD00224AFC /* UITextFieldExtensions.swift in Sources */,
+				3849829520AE115E00224AFC /* UIButtonExtensions.swift in Sources */,
+				3849829720AE12B800224AFC /* UIColorExtensions.swift in Sources */,
+				38FB03A520ACC6C000723554 /* LoginViewController.swift in Sources */,
 				38FB03A320ACC6C000723554 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +369,7 @@
 		};
 		38FB03B220ACC6C200723554 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 566E8005BDDF5C918C215E1F /* Pods-Podfy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +387,7 @@
 		};
 		38FB03B320ACC6C200723554 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D9969B2083612C8E9C873AB /* Pods-Podfy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
