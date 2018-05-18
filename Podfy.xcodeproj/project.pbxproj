@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380294C520AE5D980091CCE2 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380294C420AE5D980091CCE2 /* MainTabBarViewController.swift */; };
+		3842374220AF03D500978E12 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842374120AF03D500978E12 /* FavoritesViewController.swift */; };
 		3849829120ADCACD00224AFC /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829020ADCACD00224AFC /* UITextFieldExtensions.swift */; };
 		3849829320ADCCA100224AFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3849829220ADCCA100224AFC /* GoogleService-Info.plist */; };
 		3849829520AE115E00224AFC /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829420AE115E00224AFC /* UIButtonExtensions.swift */; };
 		3849829720AE12B800224AFC /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829620AE12B800224AFC /* UIColorExtensions.swift */; };
+		3849829A20AE198C00224AFC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829920AE198C00224AFC /* SignUpViewController.swift */; };
+		3849829D20AE264E00224AFC /* FirebaseApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829C20AE264E00224AFC /* FirebaseApiService.swift */; };
+		3849829F20AE2A4100224AFC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829E20AE2A4100224AFC /* StringExtension.swift */; };
+		384982A120AE2DFB00224AFC /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384982A020AE2DFB00224AFC /* CustomAlertController.swift */; };
+		38A9533820AEEBE1005B8C71 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9533720AEEBE1005B8C71 /* CustomActivityIndicator.swift */; };
 		38FB03A320ACC6C000723554 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB03A220ACC6C000723554 /* AppDelegate.swift */; };
 		38FB03A520ACC6C000723554 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB03A420ACC6C000723554 /* LoginViewController.swift */; };
 		38FB03A820ACC6C000723554 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03A620ACC6C000723554 /* Main.storyboard */; };
@@ -20,10 +27,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		380294C420AE5D980091CCE2 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		3842374120AF03D500978E12 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		3849829020ADCACD00224AFC /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
 		3849829220ADCCA100224AFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3849829420AE115E00224AFC /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		3849829620AE12B800224AFC /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		3849829920AE198C00224AFC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3849829C20AE264E00224AFC /* FirebaseApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseApiService.swift; sourceTree = "<group>"; };
+		3849829E20AE2A4100224AFC /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		384982A020AE2DFB00224AFC /* CustomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
+		38A9533720AEEBE1005B8C71 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 		38FB039F20ACC6C000723554 /* Podfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FB03A220ACC6C000723554 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38FB03A420ACC6C000723554 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -62,8 +76,44 @@
 				3849829020ADCACD00224AFC /* UITextFieldExtensions.swift */,
 				3849829420AE115E00224AFC /* UIButtonExtensions.swift */,
 				3849829620AE12B800224AFC /* UIColorExtensions.swift */,
+				3849829E20AE2A4100224AFC /* StringExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3849829820AE197000224AFC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				38FB03A420ACC6C000723554 /* LoginViewController.swift */,
+				3849829920AE198C00224AFC /* SignUpViewController.swift */,
+				380294C420AE5D980091CCE2 /* MainTabBarViewController.swift */,
+				3842374120AF03D500978E12 /* FavoritesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3849829B20AE263500224AFC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3849829C20AE264E00224AFC /* FirebaseApiService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		384982A220AE2E0200224AFC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				384982A020AE2DFB00224AFC /* CustomAlertController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		38A9533420AEEB12005B8C71 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38A9533720AEEBE1005B8C71 /* CustomActivityIndicator.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		38FB039620ACC6C000723554 = {
@@ -87,9 +137,12 @@
 		38FB03A120ACC6C000723554 /* Podfy */ = {
 			isa = PBXGroup;
 			children = (
+				38A9533420AEEB12005B8C71 /* Views */,
+				384982A220AE2E0200224AFC /* Utils */,
+				3849829B20AE263500224AFC /* Service */,
+				3849829820AE197000224AFC /* Controller */,
 				3849828F20ADCAAB00224AFC /* Extensions */,
 				38FB03A220ACC6C000723554 /* AppDelegate.swift */,
-				38FB03A420ACC6C000723554 /* LoginViewController.swift */,
 				38FB03A620ACC6C000723554 /* Main.storyboard */,
 				38FB03A920ACC6C200723554 /* Assets.xcassets */,
 				38FB03AB20ACC6C200723554 /* LaunchScreen.storyboard */,
@@ -203,11 +256,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Podfy/Pods-Podfy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -223,10 +284,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3849829D20AE264E00224AFC /* FirebaseApiService.swift in Sources */,
+				3849829A20AE198C00224AFC /* SignUpViewController.swift in Sources */,
 				3849829120ADCACD00224AFC /* UITextFieldExtensions.swift in Sources */,
+				384982A120AE2DFB00224AFC /* CustomAlertController.swift in Sources */,
 				3849829520AE115E00224AFC /* UIButtonExtensions.swift in Sources */,
+				380294C520AE5D980091CCE2 /* MainTabBarViewController.swift in Sources */,
+				3849829F20AE2A4100224AFC /* StringExtension.swift in Sources */,
 				3849829720AE12B800224AFC /* UIColorExtensions.swift in Sources */,
+				38A9533820AEEBE1005B8C71 /* CustomActivityIndicator.swift in Sources */,
 				38FB03A520ACC6C000723554 /* LoginViewController.swift in Sources */,
+				3842374220AF03D500978E12 /* FavoritesViewController.swift in Sources */,
 				38FB03A320ACC6C000723554 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
