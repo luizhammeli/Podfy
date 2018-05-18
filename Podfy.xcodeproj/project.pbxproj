@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		380294C520AE5D980091CCE2 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380294C420AE5D980091CCE2 /* MainTabBarViewController.swift */; };
 		3842374220AF03D500978E12 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842374120AF03D500978E12 /* FavoritesViewController.swift */; };
+		3842374420AF6BAE00978E12 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842374320AF6BAE00978E12 /* ForgotPasswordViewController.swift */; };
 		3849829120ADCACD00224AFC /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829020ADCACD00224AFC /* UITextFieldExtensions.swift */; };
 		3849829320ADCCA100224AFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3849829220ADCCA100224AFC /* GoogleService-Info.plist */; };
 		3849829520AE115E00224AFC /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829420AE115E00224AFC /* UIButtonExtensions.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		380294C420AE5D980091CCE2 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		3842374120AF03D500978E12 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		3842374320AF6BAE00978E12 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		3849829020ADCACD00224AFC /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
 		3849829220ADCCA100224AFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3849829420AE115E00224AFC /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				3849829920AE198C00224AFC /* SignUpViewController.swift */,
 				380294C420AE5D980091CCE2 /* MainTabBarViewController.swift */,
 				3842374120AF03D500978E12 /* FavoritesViewController.swift */,
+				3842374320AF6BAE00978E12 /* ForgotPasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -270,6 +274,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +299,7 @@
 				3849829720AE12B800224AFC /* UIColorExtensions.swift in Sources */,
 				38A9533820AEEBE1005B8C71 /* CustomActivityIndicator.swift in Sources */,
 				38FB03A520ACC6C000723554 /* LoginViewController.swift in Sources */,
+				3842374420AF6BAE00978E12 /* ForgotPasswordViewController.swift in Sources */,
 				3842374220AF03D500978E12 /* FavoritesViewController.swift in Sources */,
 				38FB03A320ACC6C000723554 /* AppDelegate.swift in Sources */,
 			);

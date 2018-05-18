@@ -9,5 +9,6 @@ target 'Podfy' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'FBSDKLoginKit'
+  pod 'Firebase/Database'
 
 end

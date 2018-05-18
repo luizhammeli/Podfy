@@ -38,13 +38,8 @@ class FirebaseApiService {
         }
     }
     
-    func fireBaseLoginWithFacebook(){
-        func showEmailAddress() {
-
-            
-
-        }
+    func resetPassword(_ email: String, handler: @escaping (Error?)->Void){
+        Auth.auth().sendPasswordReset(withEmail: email, completion: handler)
     }
-    
     
 }

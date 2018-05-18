@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class SignUpViewController: UIViewController {
 
@@ -51,14 +52,24 @@ class SignUpViewController: UIViewController {
     
     func signUpCompletionHandler(user: User?, error:Error? ){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
-        appDelegate.customActivityIndicator.hideActivityIndicator()
+        
         if let error = error{
             print("Error Create New User: \(error)")
             CustomAlertController.showCustomAlert("Error", message: error.localizedDescription.description, delegate: self)
         }
         
-        guard let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabBarViewController") as? MainTabBarViewController else {return}
-        self.present(mainTabController, animated: true, completion: nil)
+        guard let user = user, let name = nameTextField.text else {return}
+        
+        Database.database().reference().child("child").child(user.uid).updateChildValues(["email" : user.email ?? "", "name": name]) { (error, reference) in
+            appDelegate.customActivityIndicator.hideActivityIndicator()
+            if let error = error{
+                print("Error Create New User: \(error)")
+                CustomAlertController.showCustomAlert("Error", message: error.localizedDescription.description, delegate: self)
+            }
+            guard let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarViewController") as? MainTabBarViewController else {return}
+            self.present(mainTabController, animated: true, completion: nil)
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
 }

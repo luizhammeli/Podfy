@@ -13,7 +13,7 @@
         <!--Redefine Password-->
         <scene sceneID="bF5-gx-Fpo">
             <objects>
-                <viewController id="Gmv-4w-ier" sceneMemberID="viewController">
+                <viewController id="Gmv-4w-ier" customClass="ForgotPasswordViewController" customModule="Podfy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cgm-QK-zYY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,6 +82,9 @@
                                                         <integer key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didPressSendButton:" destination="Gmv-4w-ier" eventType="touchUpInside" id="5L6-Gg-6Mu"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K99-bh-1PS">
                                                 <rect key="frame" x="225" y="0.0" width="35" height="50"/>
@@ -110,6 +113,9 @@
                         <viewLayoutGuide key="safeArea" id="Y3r-Hi-GaE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Redefine Password" id="NQu-EJ-NAp"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="bXk-2I-lNV" id="0au-T1-tv6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIM-j7-xcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,25 +166,42 @@
                                             <constraint firstAttribute="height" constant="5" id="TWo-bW-Q3G"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oK8-Qu-z8w">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snw-u6-Tn7">
                                         <rect key="frame" x="0.0" y="127" width="270" height="44"/>
-                                        <color key="backgroundColor" red="0.11372549019607843" green="0.51372549019607838" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="wRG-zH-QPj"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Login">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="22"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="didPressLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Iq-8G-tB0"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BO9-OH-BJE">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="a6e-ec-1MO"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oK8-Qu-z8w">
+                                                <rect key="frame" x="32" y="0.0" width="206" height="44"/>
+                                                <color key="backgroundColor" red="0.11372549019607843" green="0.51372549019607838" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="wRG-zH-QPj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didPressLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Iq-8G-tB0"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACk-ag-7QZ">
+                                                <rect key="frame" x="238" y="0.0" width="32" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="fOi-Gy-R4Q"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8H-es-6Xn">
                                         <rect key="frame" x="0.0" y="185" width="270" height="15"/>
                                         <constraints>
@@ -188,25 +211,42 @@
                                         <color key="textColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed4-BD-nYQ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coX-KD-BXQ">
                                         <rect key="frame" x="0.0" y="214" width="270" height="44"/>
-                                        <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="dHY-vJ-DgT"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Login with Facebook">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="22"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="didPressFacebookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Efo-vz-QGJ"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGb-Fv-5VS">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="rQO-SY-hnq"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed4-BD-nYQ">
+                                                <rect key="frame" x="30" y="0.0" width="210" height="44"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="dHY-vJ-DgT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Login with Facebook">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didPressFacebookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Efo-vz-QGJ"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="524-p6-aeg">
+                                                <rect key="frame" x="240" y="0.0" width="30" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="YiC-EE-FZJ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grW-fO-LRi">
                                         <rect key="frame" x="0.0" y="272" width="270" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -339,7 +379,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Jt-qX-dig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2349" y="161"/>
+            <point key="canvasLocation" x="2348" y="131"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="VOK-6a-x6K">
