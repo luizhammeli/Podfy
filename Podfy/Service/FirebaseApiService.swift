@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import FirebaseAuth
+import Firebase
 import FBSDKLoginKit
 
 class FirebaseApiService {
@@ -15,8 +15,16 @@ class FirebaseApiService {
     static let shared = FirebaseApiService()
     let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController
     
-    func createNewUser(_ email: String, password: String, name: String, handler: @escaping (User?, Error?)->Void){
-        Auth.auth().createUser(withEmail: email, password: password, completion: handler)
+    func createNewUser(_ email: String, password: String, name: String, handler: @escaping (Error?, DatabaseReference?)->Void){
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            
+            if let error = error {
+                handler(error, nil)
+                return
+            }
+            guard let user = user else {return}
+            self.saveUserInDatabase(user: user, name: name, handler: handler)
+        }
     }
     
     func defaultLogin(_ email: String, password: String, handler: @escaping (User?, Error?)->Void){
@@ -40,6 +48,10 @@ class FirebaseApiService {
     
     func resetPassword(_ email: String, handler: @escaping (Error?)->Void){
         Auth.auth().sendPasswordReset(withEmail: email, completion: handler)
+    }
+    
+    func saveUserInDatabase(user: User, name: String, handler: @escaping (Error?, DatabaseReference?)->Void){
+         Database.database().reference().child("child").child(user.uid).updateChildValues(["email" : user.email ?? "", "name": name], withCompletionBlock: handler)
     }
     
 }
