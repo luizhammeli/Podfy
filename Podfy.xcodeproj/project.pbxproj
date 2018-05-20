@@ -19,6 +19,8 @@
 		3849829F20AE2A4100224AFC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849829E20AE2A4100224AFC /* StringExtension.swift */; };
 		384982A120AE2DFB00224AFC /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384982A020AE2DFB00224AFC /* CustomAlertController.swift */; };
 		38A9533820AEEBE1005B8C71 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9533720AEEBE1005B8C71 /* CustomActivityIndicator.swift */; };
+		38F1729E20B21F6700F4D1CC /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1729D20B21F6700F4D1CC /* Strings.swift */; };
+		38F172A020B2214700F4D1CC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1729F20B2214700F4D1CC /* SearchViewController.swift */; };
 		38FB03A320ACC6C000723554 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB03A220ACC6C000723554 /* AppDelegate.swift */; };
 		38FB03A520ACC6C000723554 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB03A420ACC6C000723554 /* LoginViewController.swift */; };
 		38FB03A820ACC6C000723554 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03A620ACC6C000723554 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		3849829E20AE2A4100224AFC /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		384982A020AE2DFB00224AFC /* CustomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
 		38A9533720AEEBE1005B8C71 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
+		38F1729D20B21F6700F4D1CC /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		38F1729F20B2214700F4D1CC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		38FB039F20ACC6C000723554 /* Podfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FB03A220ACC6C000723554 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38FB03A420ACC6C000723554 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 				3849829920AE198C00224AFC /* SignUpViewController.swift */,
 				380294C420AE5D980091CCE2 /* MainTabBarViewController.swift */,
 				3842374120AF03D500978E12 /* FavoritesViewController.swift */,
+				38F1729F20B2214700F4D1CC /* SearchViewController.swift */,
 				3842374320AF6BAE00978E12 /* ForgotPasswordViewController.swift */,
 			);
 			path = Controller;
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				384982A020AE2DFB00224AFC /* CustomAlertController.swift */,
+				38F1729D20B21F6700F4D1CC /* Strings.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 				384982A120AE2DFB00224AFC /* CustomAlertController.swift in Sources */,
 				3849829520AE115E00224AFC /* UIButtonExtensions.swift in Sources */,
 				380294C520AE5D980091CCE2 /* MainTabBarViewController.swift in Sources */,
+				38F1729E20B21F6700F4D1CC /* Strings.swift in Sources */,
+				38F172A020B2214700F4D1CC /* SearchViewController.swift in Sources */,
 				3849829F20AE2A4100224AFC /* StringExtension.swift in Sources */,
 				3849829720AE12B800224AFC /* UIColorExtensions.swift in Sources */,
 				38A9533820AEEBE1005B8C71 /* CustomActivityIndicator.swift in Sources */,

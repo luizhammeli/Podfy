@@ -303,28 +303,98 @@
         <!--Search-->
         <scene sceneID="OB7-88-hSC">
             <objects>
-                <viewController id="Hrw-su-znp" sceneMemberID="viewController">
+                <viewController id="Hrw-su-znp" customClass="SearchViewController" customModule="Podfy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AhN-Zh-g77">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="452"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="14" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="72F-3m-bFq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="403"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="x5J-Jj-sge">
+                                        <rect key="frame" x="0.0" y="14" width="320" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x5J-Jj-sge" id="Xku-Xh-aq8">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="p0J-2V-UKU">
+                                                    <rect key="frame" x="14" y="10" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="au3-j9-fIM"/>
+                                                        <constraint firstAttribute="height" constant="70" id="ucG-rS-Ywp"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="35"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm6-QU-8l2">
+                                                    <rect key="frame" x="94" y="15" width="110.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evm-vX-aXI">
+                                                    <rect key="frame" x="94" y="37.5" width="81.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="0.93642979452054798" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 episodes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Td5-P0-ht0">
+                                                    <rect key="frame" x="94" y="58.5" width="75" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="evm-vX-aXI" firstAttribute="top" secondItem="Xm6-QU-8l2" secondAttribute="bottom" constant="3" id="1Eu-2S-Xuk"/>
+                                                <constraint firstItem="Xm6-QU-8l2" firstAttribute="top" secondItem="p0J-2V-UKU" secondAttribute="top" constant="5" id="FKP-HE-MQG"/>
+                                                <constraint firstItem="Xm6-QU-8l2" firstAttribute="leading" secondItem="p0J-2V-UKU" secondAttribute="trailing" constant="10" id="G0e-L8-oWF"/>
+                                                <constraint firstItem="p0J-2V-UKU" firstAttribute="leading" secondItem="Xku-Xh-aq8" secondAttribute="leading" constant="14" id="JlK-W0-BCE"/>
+                                                <constraint firstItem="Td5-P0-ht0" firstAttribute="leading" secondItem="evm-vX-aXI" secondAttribute="leading" id="Jna-Vw-Wpg"/>
+                                                <constraint firstItem="p0J-2V-UKU" firstAttribute="centerY" secondItem="Xku-Xh-aq8" secondAttribute="centerY" id="Vc2-JB-19v"/>
+                                                <constraint firstItem="evm-vX-aXI" firstAttribute="leading" secondItem="Xm6-QU-8l2" secondAttribute="leading" id="boB-1i-GgA"/>
+                                                <constraint firstItem="Td5-P0-ht0" firstAttribute="top" secondItem="evm-vX-aXI" secondAttribute="bottom" constant="3" id="eoF-Pt-Pe2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hrw-su-znp" id="TgZ-kt-qph"/>
+                                    <outlet property="delegate" destination="Hrw-su-znp" id="J2r-Zy-RfY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="72F-3m-bFq" firstAttribute="leading" secondItem="7He-w8-7Jv" secondAttribute="leading" id="a3s-7U-MMA"/>
+                            <constraint firstItem="72F-3m-bFq" firstAttribute="bottom" secondItem="7He-w8-7Jv" secondAttribute="bottom" id="b6q-6J-JAa"/>
+                            <constraint firstItem="72F-3m-bFq" firstAttribute="trailing" secondItem="7He-w8-7Jv" secondAttribute="trailing" id="c9z-eO-87x"/>
+                            <constraint firstItem="72F-3m-bFq" firstAttribute="top" secondItem="7He-w8-7Jv" secondAttribute="top" id="gfE-7x-Big"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7He-w8-7Jv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="p1H-zH-UPx"/>
                     <connections>
+                        <outlet property="searchResultTableView" destination="72F-3m-bFq" id="Rsu-V8-Hom"/>
                         <segue destination="5VD-WZ-uGl" kind="show" identifier="goToEpisodes" id="iIt-Vy-Qed"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjY-Xq-1Ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4354" y="526"/>
+            <point key="canvasLocation" x="4353.75" y="525"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kR0-Rw-RdH">
             <objects>
                 <viewController id="5VD-WZ-uGl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VOq-WL-dbK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="452"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ao9-25-3Bi"/>
@@ -339,7 +409,7 @@
             <objects>
                 <viewController id="9uy-Lr-P7o" customClass="FavoritesViewController" customModule="Podfy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BSc-W8-K6i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="452"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rG0-IT-Bfi"/>
@@ -611,7 +681,7 @@
                     <tabBarItem key="tabBarItem" title="Favorites" image="like-unselected" selectedImage="icons8-gostar-filled-50" id="lSF-sq-SNr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="9NG-uv-LOO">
-                        <rect key="frame" x="0.0" y="20" width="320" height="93"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -637,7 +707,7 @@
                     <tabBarItem key="tabBarItem" title="Search" image="search-unselected" selectedImage="search" id="VEP-Vf-zCF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="eQ9-k0-s9h">
-                        <rect key="frame" x="0.0" y="20" width="320" height="93"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -669,6 +739,6 @@
         <image name="user-icon" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hgs-Iv-f5n"/>
+        <segue reference="iIt-Vy-Qed"/>
     </inferredMetricsTieBreakers>
 </document>

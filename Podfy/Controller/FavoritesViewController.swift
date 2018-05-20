@@ -12,8 +12,7 @@ import FirebaseAuth
 class FavoritesViewController: UIViewController{
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        print(Auth.auth().currentUser?.uid)
+        super.viewDidLoad()        
     }
     
     @IBAction func logOut(_ sender: Any) {

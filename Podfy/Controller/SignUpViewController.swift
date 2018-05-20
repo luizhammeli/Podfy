@@ -31,22 +31,15 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    func checkUserData(_ email: String, _ password: String, _ name: String)-> Bool{
-        
+    func checkUserData(_ email: String, _ password: String, _ name: String)-> Bool{        
         if (!email.isEmpty && !password.isEmpty && !name.isEmpty){
-            if (!email.checkEmail()){
-                CustomAlertController.showCustomAlert("teste", message: "teste", delegate: self)
+            if(password.count < 6 || name.count < 6){
+                CustomAlertController.showCustomAlert(Strings.error, message: Strings.emailAndPasswordTextFieldErrorMessage, delegate: self)
                 return false
             }
-            
-            if(password.count < 6 || name.count < 5){
-                CustomAlertController.showCustomAlert("teste", message: "teste", delegate: self)
-                return false
-            }
-            
             return true
         }
-        CustomAlertController.showCustomAlert("teste", message: "teste", delegate: self)
+        CustomAlertController.showCustomAlert(Strings.error, message: Strings.emptyFieldMessage, delegate: self)
         return false
     }
     
