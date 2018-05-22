@@ -16,7 +16,11 @@ class FavoritesViewController: UIViewController{
     }
     
     @IBAction func logOut(_ sender: Any) {
-        try? Auth.auth().signOut()
-        self.dismiss(animated: true, completion: nil)
+        let alertController = UIAlertController(title: "", message: "Settings", preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Sign Out", style: .default, handler: { (alert) in
+            try? Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alertController, animated: true, completion: nil)
     }
 }

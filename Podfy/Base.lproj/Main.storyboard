@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -305,18 +306,18 @@
             <objects>
                 <viewController id="Hrw-su-znp" customClass="SearchViewController" customModule="Podfy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AhN-Zh-g77">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="452"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="14" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="72F-3m-bFq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="403"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="92" estimatedRowHeight="-1" sectionHeaderHeight="14" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="72F-3m-bFq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="406"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="x5J-Jj-sge">
-                                        <rect key="frame" x="0.0" y="14" width="320" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="x5J-Jj-sge" customClass="SearchTableViewCell" customModule="Podfy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="14" width="320" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x5J-Jj-sge" id="Xku-Xh-aq8">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="p0J-2V-UKU">
@@ -332,13 +333,13 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm6-QU-8l2">
-                                                    <rect key="frame" x="94" y="15" width="110.5" height="19.5"/>
+                                                    <rect key="frame" x="94" y="15" width="205" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evm-vX-aXI">
-                                                    <rect key="frame" x="94" y="37.5" width="81.5" height="18"/>
+                                                    <rect key="frame" x="94" y="37.5" width="205" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="0.93642979452054798" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -360,8 +361,16 @@
                                                 <constraint firstItem="p0J-2V-UKU" firstAttribute="centerY" secondItem="Xku-Xh-aq8" secondAttribute="centerY" id="Vc2-JB-19v"/>
                                                 <constraint firstItem="evm-vX-aXI" firstAttribute="leading" secondItem="Xm6-QU-8l2" secondAttribute="leading" id="boB-1i-GgA"/>
                                                 <constraint firstItem="Td5-P0-ht0" firstAttribute="top" secondItem="evm-vX-aXI" secondAttribute="bottom" constant="3" id="eoF-Pt-Pe2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="evm-vX-aXI" secondAttribute="trailing" constant="6" id="ixo-04-1Yl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Xm6-QU-8l2" secondAttribute="trailing" constant="6" id="zFI-Pq-Uh6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistLabel" destination="evm-vX-aXI" id="F3l-kr-vYh"/>
+                                            <outlet property="episodeTitleLabel" destination="Xm6-QU-8l2" id="ri3-SJ-Usx"/>
+                                            <outlet property="numberOfEpisodesLabel" destination="Td5-P0-ht0" id="naj-AS-PsO"/>
+                                            <outlet property="podcastImage" destination="p0J-2V-UKU" id="ETE-Vh-yrj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -394,7 +403,7 @@
             <objects>
                 <viewController id="5VD-WZ-uGl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VOq-WL-dbK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="452"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ao9-25-3Bi"/>
@@ -409,7 +418,7 @@
             <objects>
                 <viewController id="9uy-Lr-P7o" customClass="FavoritesViewController" customModule="Podfy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BSc-W8-K6i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="452"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rG0-IT-Bfi"/>
@@ -681,7 +690,7 @@
                     <tabBarItem key="tabBarItem" title="Favorites" image="like-unselected" selectedImage="icons8-gostar-filled-50" id="lSF-sq-SNr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="9NG-uv-LOO">
-                        <rect key="frame" x="0.0" y="20" width="320" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="93"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -707,7 +716,7 @@
                     <tabBarItem key="tabBarItem" title="Search" image="search-unselected" selectedImage="search" id="VEP-Vf-zCF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="eQ9-k0-s9h">
-                        <rect key="frame" x="0.0" y="20" width="320" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="93"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">

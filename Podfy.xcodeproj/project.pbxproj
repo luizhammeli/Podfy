@@ -26,6 +26,12 @@
 		38FB03A820ACC6C000723554 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03A620ACC6C000723554 /* Main.storyboard */; };
 		38FB03AA20ACC6C200723554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03A920ACC6C200723554 /* Assets.xcassets */; };
 		38FB03AD20ACC6C200723554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03AB20ACC6C200723554 /* LaunchScreen.storyboard */; };
+		73A2402020B447CD00E9D519 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2401F20B447CD00E9D519 /* Podcast.swift */; };
+		73A2402320B448BA00E9D519 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2402220B448BA00E9D519 /* CustomLabel.swift */; };
+		73A2402520B44EA700E9D519 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2402420B44EA700E9D519 /* ApiService.swift */; };
+		73A2402720B4708D00E9D519 /* ErrorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2402620B4708D00E9D519 /* ErrorResult.swift */; };
+		73A2402920B4864400E9D519 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2402820B4864400E9D519 /* SearchResult.swift */; };
+		73A2402B20B4874000E9D519 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2402A20B4874000E9D519 /* SearchTableViewCell.swift */; };
 		7CACC3D03DC74701961F8148 /* Pods_Podfy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D936E880CA515CB384FB34 /* Pods_Podfy.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +59,12 @@
 		38FB03AE20ACC6C200723554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566E8005BDDF5C918C215E1F /* Pods-Podfy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podfy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Podfy/Pods-Podfy.debug.xcconfig"; sourceTree = "<group>"; };
 		6D9969B2083612C8E9C873AB /* Pods-Podfy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podfy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podfy/Pods-Podfy.release.xcconfig"; sourceTree = "<group>"; };
+		73A2401F20B447CD00E9D519 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		73A2402220B448BA00E9D519 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		73A2402420B44EA700E9D519 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		73A2402620B4708D00E9D519 /* ErrorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResult.swift; sourceTree = "<group>"; };
+		73A2402820B4864400E9D519 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		73A2402A20B4874000E9D519 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		76D936E880CA515CB384FB34 /* Pods_Podfy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podfy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3849829C20AE264E00224AFC /* FirebaseApiService.swift */,
+				73A2402420B44EA700E9D519 /* ApiService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -111,18 +124,12 @@
 		384982A220AE2E0200224AFC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				38A9533720AEEBE1005B8C71 /* CustomActivityIndicator.swift */,
 				384982A020AE2DFB00224AFC /* CustomAlertController.swift */,
 				38F1729D20B21F6700F4D1CC /* Strings.swift */,
+				73A2402620B4708D00E9D519 /* ErrorResult.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		38A9533420AEEB12005B8C71 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				38A9533720AEEBE1005B8C71 /* CustomActivityIndicator.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		38FB039620ACC6C000723554 = {
@@ -146,7 +153,8 @@
 		38FB03A120ACC6C000723554 /* Podfy */ = {
 			isa = PBXGroup;
 			children = (
-				38A9533420AEEB12005B8C71 /* Views */,
+				73A2402120B448AC00E9D519 /* View */,
+				73A2401E20B4479C00E9D519 /* Model */,
 				384982A220AE2E0200224AFC /* Utils */,
 				3849829B20AE263500224AFC /* Service */,
 				3849829820AE197000224AFC /* Controller */,
@@ -159,6 +167,24 @@
 				3849829220ADCCA100224AFC /* GoogleService-Info.plist */,
 			);
 			path = Podfy;
+			sourceTree = "<group>";
+		};
+		73A2401E20B4479C00E9D519 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73A2401F20B447CD00E9D519 /* Podcast.swift */,
+				73A2402820B4864400E9D519 /* SearchResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73A2402120B448AC00E9D519 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73A2402220B448BA00E9D519 /* CustomLabel.swift */,
+				73A2402A20B4874000E9D519 /* SearchTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		772D194AB1EAECC2C1BCFF8D /* Pods */ = {
@@ -265,21 +291,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Podfy/Pods-Podfy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -297,10 +327,15 @@
 			files = (
 				3849829D20AE264E00224AFC /* FirebaseApiService.swift in Sources */,
 				3849829A20AE198C00224AFC /* SignUpViewController.swift in Sources */,
+				73A2402920B4864400E9D519 /* SearchResult.swift in Sources */,
 				3849829120ADCACD00224AFC /* UITextFieldExtensions.swift in Sources */,
+				73A2402720B4708D00E9D519 /* ErrorResult.swift in Sources */,
 				384982A120AE2DFB00224AFC /* CustomAlertController.swift in Sources */,
+				73A2402B20B4874000E9D519 /* SearchTableViewCell.swift in Sources */,
 				3849829520AE115E00224AFC /* UIButtonExtensions.swift in Sources */,
+				73A2402320B448BA00E9D519 /* CustomLabel.swift in Sources */,
 				380294C520AE5D980091CCE2 /* MainTabBarViewController.swift in Sources */,
+				73A2402020B447CD00E9D519 /* Podcast.swift in Sources */,
 				38F1729E20B21F6700F4D1CC /* Strings.swift in Sources */,
 				38F172A020B2214700F4D1CC /* SearchViewController.swift in Sources */,
 				3849829F20AE2A4100224AFC /* StringExtension.swift in Sources */,
@@ -309,6 +344,7 @@
 				38FB03A520ACC6C000723554 /* LoginViewController.swift in Sources */,
 				3842374420AF6BAE00978E12 /* ForgotPasswordViewController.swift in Sources */,
 				3842374220AF03D500978E12 /* FavoritesViewController.swift in Sources */,
+				73A2402520B44EA700E9D519 /* ApiService.swift in Sources */,
 				38FB03A320ACC6C000723554 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

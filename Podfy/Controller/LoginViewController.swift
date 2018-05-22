@@ -68,8 +68,7 @@ class LoginViewController: UIViewController {
         appDelegate?.customActivityIndicator.showActivityIndicator()
         FirebaseApiService.shared.facebookLogin { (user, error) in
             self.appDelegate?.customActivityIndicator.hideActivityIndicator()
-            if let error = error {
-                CustomAlertController.showCustomAlert("Facebook Login Error", message: error.localizedDescription.description, delegate: self)
+            if error != nil {
                 return
             }
             self.performSegue(withIdentifier: "goToMainTabController", sender: self)

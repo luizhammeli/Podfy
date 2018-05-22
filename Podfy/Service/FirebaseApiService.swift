@@ -16,33 +16,37 @@ class FirebaseApiService {
     let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController
     
     func createNewUser(_ email: String, password: String, name: String, handler: @escaping (Error?, DatabaseReference?)->Void){
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             
             if let error = error {
                 handler(error, nil)
                 return
             }
-            guard let user = user else {return}
+            guard let user = result?.user else {return}
+            
             self.saveUserInDatabase(user: user, name: name, handler: handler)
         }
     }
     
-    func defaultLogin(_ email: String, password: String, handler: @escaping (User?, Error?)->Void){
+    func defaultLogin(_ email: String, password: String, handler: @escaping (AuthDataResult?, Error?)->Void){
         Auth.auth().signIn(withEmail: email, password: password, completion: handler)
     }
     
-    func facebookLogin(handler: @escaping (User?, Error?)->Void){
+    func facebookLogin(handler: @escaping (AuthDataResult?, Error?)->Void){
         guard let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController, let visibleViewController = rootViewController.visibleViewController else{return}
         FBSDKLoginManager().logIn(withReadPermissions: ["email"], from: visibleViewController) { (result, error) in
-            if let error = error {
+            if let error = error{
                 print("Error")
-                CustomAlertController.showCustomAlert("Facebook Login Error", message: error.localizedDescription.description, delegate: visibleViewController)
+                handler(nil, error)
                 return
             }
-            let accessToken = FBSDKAccessToken.current()
-            guard let accessTokenString = accessToken?.tokenString else { return }
-            let credentials = FacebookAuthProvider.credential(withAccessToken: accessTokenString)
-            Auth.auth().signIn(with: credentials, completion: handler)
+            if let accessToken = FBSDKAccessToken.current(){
+                guard let accessTokenString = accessToken.tokenString else { return }
+                let credentials = FacebookAuthProvider.credential(withAccessToken: accessTokenString)                
+                Auth.auth().signInAndRetrieveData(with: credentials, completion: handler)
+            }else{
+                handler(nil, NSError(domain: "", code: 0, userInfo: nil))
+            }
         }
     }
     
