@@ -26,7 +26,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //MARK:- SearchBar
     fileprivate func setUpSearchController(){
         navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.hidesSearchBarWhenScrolling = false        
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.tintColor = .white
         searchController.searchBar.delegate = self
