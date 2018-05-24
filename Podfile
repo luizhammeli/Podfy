@@ -12,5 +12,6 @@ target 'Podfy' do
   pod 'Firebase/Database'
   pod 'Alamofire'
   pod 'SDWebImage'
+  pod 'FeedKit'
 
 end

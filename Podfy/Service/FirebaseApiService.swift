@@ -55,7 +55,19 @@ class FirebaseApiService {
     }
     
     func saveUserInDatabase(user: User, name: String, handler: @escaping (Error?, DatabaseReference?)->Void){
-         Database.database().reference().child("child").child(user.uid).updateChildValues(["email" : user.email ?? "", "name": name], withCompletionBlock: handler)
+         Database.database().reference().child("user").child(user.uid).updateChildValues(["email" : user.email ?? "", "name": name], withCompletionBlock: handler)
     }
     
+    func saveFavoriteInDatabase(podcast: Podcast, handler: @escaping (Error?, DatabaseReference?)->Void){
+        guard let id = Auth.auth().currentUser?.uid else {return}
+        guard let trackName = podcast.trackName else {return}
+        let value = ["trackName" : trackName, "artistName": podcast.artistName ?? "", "feedUrl": podcast.feedUrl ?? "", "podcast": podcast.artworkUrl600 ?? ""]
+        Database.database().reference().child("favorite").child(id).child(trackName).updateChildValues(value, withCompletionBlock: handler)
+    }
+    
+    func removeFavoriteInDatabase(podcast: Podcast, handler: @escaping (Error?, DatabaseReference?)->Void){         
+        guard let id = Auth.auth().currentUser?.uid else {return}
+        guard let trackName = podcast.trackName else {return}
+        Database.database().reference().child("favorite").child(id).child(trackName).removeValue(completionBlock: handler)
+    }
 }

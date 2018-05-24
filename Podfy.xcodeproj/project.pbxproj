@@ -35,6 +35,11 @@
 		73E5488E20B5DFAF00F0476A /* MainPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5488D20B5DFAF00F0476A /* MainPlayer.swift */; };
 		73E5489020B5DFC000F0476A /* MainPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E5488F20B5DFC000F0476A /* MainPlayer.xib */; };
 		73E5489420B5ECDF00F0476A /* MiniPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E5489320B5ECDF00F0476A /* MiniPlayer.xib */; };
+		73E5489620B6E70F00F0476A /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5489520B6E70F00F0476A /* EpisodesViewController.swift */; };
+		73E5489820B6F31C00F0476A /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5489720B6F31C00F0476A /* EpisodeTableViewCell.swift */; };
+		73E5489A20B70CB200F0476A /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5489920B70CB200F0476A /* Episode.swift */; };
+		73E5489C20B70D6100F0476A /* FeedkitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5489B20B70D6100F0476A /* FeedkitExtensions.swift */; };
+		73E5489E20B71A3200F0476A /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5489D20B71A3200F0476A /* DateExtensions.swift */; };
 		7CACC3D03DC74701961F8148 /* Pods_Podfy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D936E880CA515CB384FB34 /* Pods_Podfy.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +76,11 @@
 		73E5488D20B5DFAF00F0476A /* MainPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPlayer.swift; sourceTree = "<group>"; };
 		73E5488F20B5DFC000F0476A /* MainPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainPlayer.xib; sourceTree = "<group>"; };
 		73E5489320B5ECDF00F0476A /* MiniPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniPlayer.xib; sourceTree = "<group>"; };
+		73E5489520B6E70F00F0476A /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		73E5489720B6F31C00F0476A /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		73E5489920B70CB200F0476A /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		73E5489B20B70D6100F0476A /* FeedkitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedkitExtensions.swift; sourceTree = "<group>"; };
+		73E5489D20B71A3200F0476A /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		76D936E880CA515CB384FB34 /* Pods_Podfy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podfy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +111,8 @@
 				3849829420AE115E00224AFC /* UIButtonExtensions.swift */,
 				3849829620AE12B800224AFC /* UIColorExtensions.swift */,
 				3849829E20AE2A4100224AFC /* StringExtension.swift */,
+				73E5489B20B70D6100F0476A /* FeedkitExtensions.swift */,
+				73E5489D20B71A3200F0476A /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -114,6 +126,7 @@
 				3842374120AF03D500978E12 /* FavoritesViewController.swift */,
 				38F1729F20B2214700F4D1CC /* SearchViewController.swift */,
 				3842374320AF6BAE00978E12 /* ForgotPasswordViewController.swift */,
+				73E5489520B6E70F00F0476A /* EpisodesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +191,7 @@
 			children = (
 				73A2401F20B447CD00E9D519 /* Podcast.swift */,
 				73A2402820B4864400E9D519 /* SearchResult.swift */,
+				73E5489920B70CB200F0476A /* Episode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +204,7 @@
 				38FB03AB20ACC6C200723554 /* LaunchScreen.storyboard */,
 				73A2402220B448BA00E9D519 /* CustomLabel.swift */,
 				73A2402A20B4874000E9D519 /* SearchTableViewCell.swift */,
+				73E5489720B6F31C00F0476A /* EpisodeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +345,7 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -342,6 +358,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -365,10 +382,13 @@
 				73A2402920B4864400E9D519 /* SearchResult.swift in Sources */,
 				3849829120ADCACD00224AFC /* UITextFieldExtensions.swift in Sources */,
 				73A2402720B4708D00E9D519 /* ErrorResult.swift in Sources */,
+				73E5489E20B71A3200F0476A /* DateExtensions.swift in Sources */,
 				384982A120AE2DFB00224AFC /* CustomAlertController.swift in Sources */,
 				73A2402B20B4874000E9D519 /* SearchTableViewCell.swift in Sources */,
 				3849829520AE115E00224AFC /* UIButtonExtensions.swift in Sources */,
 				73A2402320B448BA00E9D519 /* CustomLabel.swift in Sources */,
+				73E5489820B6F31C00F0476A /* EpisodeTableViewCell.swift in Sources */,
+				73E5489620B6E70F00F0476A /* EpisodesViewController.swift in Sources */,
 				380294C520AE5D980091CCE2 /* MainTabBarViewController.swift in Sources */,
 				73A2402020B447CD00E9D519 /* Podcast.swift in Sources */,
 				73E5488E20B5DFAF00F0476A /* MainPlayer.swift in Sources */,
@@ -378,9 +398,11 @@
 				3849829720AE12B800224AFC /* UIColorExtensions.swift in Sources */,
 				38A9533820AEEBE1005B8C71 /* CustomActivityIndicator.swift in Sources */,
 				38FB03A520ACC6C000723554 /* LoginViewController.swift in Sources */,
+				73E5489C20B70D6100F0476A /* FeedkitExtensions.swift in Sources */,
 				3842374420AF6BAE00978E12 /* ForgotPasswordViewController.swift in Sources */,
 				3842374220AF03D500978E12 /* FavoritesViewController.swift in Sources */,
 				73A2402520B44EA700E9D519 /* ApiService.swift in Sources */,
+				73E5489A20B70CB200F0476A /* Episode.swift in Sources */,
 				38FB03A320ACC6C000723554 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

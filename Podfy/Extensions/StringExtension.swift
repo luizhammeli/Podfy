@@ -15,4 +15,8 @@ extension String{
         let predicate = NSPredicate(format:"SELF MATCHES %@", regEx)
         return predicate.evaluate(with: self)
     }
+        
+    func checkHttpsString() ->String{
+        return self.contains("https:") ? self : self.replacingOccurrences(of: "http:", with: "https:")
+    }
 }

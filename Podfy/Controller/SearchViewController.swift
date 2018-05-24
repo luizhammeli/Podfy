@@ -26,7 +26,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //MARK:- SearchBar
     fileprivate func setUpSearchController(){
         navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false        
+        navigationItem.hidesSearchBarWhenScrolling = false
+        self.navigationController?.navigationBar.tintColor = .white
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.tintColor = .white
         searchController.searchBar.delegate = self
@@ -69,5 +70,21 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return CustomSearchLabel()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "goToEpisodes", sender: podcasts[indexPath.item])
+        self.searchResultTableView.deselectRow(at: indexPath, animated: true)        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.searchController.searchBar.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier != "goToEpisodes"){return}        
+        guard let episodesController = segue.destination as? EpisodesViewController else {return}
+        guard let podcast = sender as? Podcast else {return}
+        episodesController.podcast = podcast
     }
 }
