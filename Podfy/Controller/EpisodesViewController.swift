@@ -57,6 +57,11 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NotificationCenter.default.post(name: .maximizePlayerControllerNotificationName, object: nil)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

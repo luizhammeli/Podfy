@@ -10,5 +10,5 @@ import Foundation
 
 extension NSNotification.Name{
     static let minimizePlayerControllerNotificationName = NSNotification.Name(rawValue: "minimizePlayerController")
-    static let updateFavoritesCollectionViewData = NSNotification.Name(rawValue: "updateFavoritesCollectionViewData")
+    static let maximizePlayerControllerNotificationName = NSNotification.Name(rawValue: "maximizePlayerControllerNotificationName")
 }

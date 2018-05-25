@@ -11,6 +11,6 @@ import UIKit
 class MiniPlayer: UIView {
     
     override func awakeFromNib() {
-        super.awakeFromNib()        
+        super.awakeFromNib()
     }
 }

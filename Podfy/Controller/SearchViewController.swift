@@ -72,6 +72,16 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return CustomSearchLabel()
     }
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 64
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "goToEpisodes", sender: podcasts[indexPath.item])
         self.searchResultTableView.deselectRow(at: indexPath, animated: true)        

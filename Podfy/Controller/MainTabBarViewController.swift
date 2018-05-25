@@ -17,10 +17,11 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         setUpViews()
         NotificationCenter.default.addObserver(self, selector: #selector(minimizePlayer), name: NSNotification.Name.minimizePlayerControllerNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showMainPlayerView), name: NSNotification.Name.maximizePlayerControllerNotificationName, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)        
+        super.viewDidAppear(animated)
     }
     
     func setUpViews(){
@@ -35,7 +36,7 @@ class MainTabBarViewController: UITabBarController {
         mainPlayerView?.heightAnchor.constraint(equalToConstant: self.view.frame.height).isActive = true
     }
     
-    func showMainPlayerView(){
+    @objc func showMainPlayerView(){
         topAnchor?.constant = 0
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
             self.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
