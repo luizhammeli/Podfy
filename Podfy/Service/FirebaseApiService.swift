@@ -70,4 +70,19 @@ class FirebaseApiService {
         guard let trackName = podcast.trackName else {return}
         Database.database().reference().child("favorite").child(id).child(trackName).removeValue(completionBlock: handler)
     }
+    
+    func checkFavorite(podcast: Podcast,  handler: @escaping (_ isFavorite: Bool?)->Void){
+        guard let id = Auth.auth().currentUser?.uid else {return}
+        guard let trackName = podcast.trackName else {return}
+        Database.database().reference().child("favorite").child(id).child(trackName).observeSingleEvent(of: .value, with: { (snapshot) in            
+            guard let dict = snapshot.value as? [String: Any] else {return}
+            if(!dict.isEmpty){
+                handler(true)
+            }
+            handler(false)
+            
+        }) { (error) in
+            handler(false)
+        }
+    }
 }

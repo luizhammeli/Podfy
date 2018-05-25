@@ -23,6 +23,10 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         setUpViews()
         fetchEpisodes()
+        FirebaseApiService.shared.checkFavorite(podcast: podcast!) { (isFavorite) in                        
+            self.likeBarButton.image = #imageLiteral(resourceName: "like-filled-50")
+            self.isFavorite = true
+        }
     }
     
     func setUpViews(){
