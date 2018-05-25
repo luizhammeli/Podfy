@@ -85,4 +85,19 @@ class FirebaseApiService {
             handler(false)
         }
     }
+    
+    func fetchFavorites(handler: @escaping (_ podcasts: [Podcast])->Void){
+        guard let id = Auth.auth().currentUser?.uid else {return}
+        var podcasts = [Podcast]()
+        Database.database().reference().child("favorite").child(id).observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let dictionaries = snapshot.value as? [String: Any] else {return}
+            dictionaries.forEach({(key: String, value: Any) in
+                guard let podcastDict = value as? [String: Any] else {return}
+                podcasts.append(Podcast(podcastDict))
+            })
+            handler(podcasts)
+        }) { (error) in
+            handler(podcasts)
+        }
+    }
 }

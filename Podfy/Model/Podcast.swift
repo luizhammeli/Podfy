@@ -15,18 +15,11 @@ class Podcast: NSObject,Codable {
     var trackCount: Int?
     var feedUrl: String?
     
-//    func encode(with aCoder: NSCoder) {
-//        aCoder.encode(trackName ?? "", forKey: "trackName")
-//        aCoder.encode(artistName ?? "", forKey: "artistName")
-//        aCoder.encode(artworkUrl600 ?? "", forKey: "artworkUrl600")
-//        aCoder.encode(feedUrl ?? "", forKey: "feedUrl")
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        trackName = aDecoder.decodeObject(forKey: "trackName") as? String ?? ""
-//        artistName = aDecoder.decodeObject(forKey: "artistName") as? String ?? ""
-//        artworkUrl600 = aDecoder.decodeObject(forKey: "artworkUrl600") as? String ?? ""
-//        feedUrl = aDecoder.decodeObject(forKey: "feedUrl") as? String ?? ""
-//    }
-    
+    convenience init(_ dic: [String: Any]) {
+        self.init()
+        self.trackName = dic["trackName"] as? String ?? ""
+        self.artistName = dic["artistName"] as? String ?? ""
+        self.artworkUrl600 = dic["podcast"] as? String ?? ""
+        self.feedUrl = dic["feedUrl"] as? String ?? ""
+    }
 }

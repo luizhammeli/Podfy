@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         if (Auth.auth().currentUser != nil){
             self.performSegue(withIdentifier: "goToMainTabController", sender: self)
         }else{

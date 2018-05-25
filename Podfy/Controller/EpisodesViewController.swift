@@ -71,6 +71,7 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
             }
             return
         }
+        
         FirebaseApiService.shared.saveFavoriteInDatabase(podcast: podcast) { (error, reference) in
             self.appDelegate.customActivityIndicator.hideActivityIndicator()
             self.addFavorite(error)
