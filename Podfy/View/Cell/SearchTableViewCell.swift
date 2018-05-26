@@ -13,11 +13,14 @@ class SearchTableViewCell: UITableViewCell {
     
     var podcast: Podcast?{
         didSet{
-            guard let podcast = podcast, let artworkUrl = podcast.artworkUrl600 else {return}
+            guard let podcast = podcast, let artworkUrl = podcast.artworkUrl600, let count = podcast.trackCount else {return}
             guard let url = URL(string: artworkUrl) else {return}
             episodeTitleLabel.text = podcast.trackName
             artistLabel.text = podcast.artistName
             podcastImage.sd_setImage(with: url, completed: nil)
+            let episodesText = count > 1 ? "espisodes" : "episode"
+            numberOfEpisodesLabel.text = "\(count) \(episodesText)"
+            
         }
     }
     

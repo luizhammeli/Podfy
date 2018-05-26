@@ -68,7 +68,7 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        NotificationCenter.default.post(name: .maximizePlayerControllerNotificationName, object: nil)
+        MainTabBarViewController.shared?.showMainPlayerView(episodes[indexPath.item])
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
     

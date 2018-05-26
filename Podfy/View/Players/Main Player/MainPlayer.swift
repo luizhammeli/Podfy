@@ -12,6 +12,9 @@ import Foundation
 class MainPlayer: UIView{
     
     var miniPlayer: MiniPlayer!
+    @IBOutlet var podcastImageView: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var authorLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,5 +34,13 @@ class MainPlayer: UIView{
     
     @IBAction func didPressMinimizeButton(_ sender: Any) {
         NotificationCenter.default.post(name: .minimizePlayerControllerNotificationName, object: nil)
+    }
+    
+    func changeViews(_ episodes: Episode, alpha: Int){
+        miniPlayer.alpha = 0
+        titleLabel.text = episodes.title
+        authorLabel.text = episodes.author
+        guard let url = URL(string: episodes.imageUrl) else {return}
+        podcastImageView.sd_setImage(with: url, completed: nil)
     }
 }

@@ -52,6 +52,11 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="dq0-97-jK4" secondAttribute="height" multiplier="1:1" id="ZPw-UE-uLu"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="6"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PodCast Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHG-KT-zt4">
                             <rect key="frame" x="0.0" y="324" width="272" height="20.5"/>
@@ -91,7 +96,7 @@
                                         <constraint firstAttribute="height" constant="24" id="Tpf-dK-pPm"/>
                                     </constraints>
                                 </stackView>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="r31-TK-ny6">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="r31-TK-ny6">
                                     <rect key="frame" x="-2" y="24" width="276" height="17"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="maximumTrackTintColor" red="0.41956827347048653" green="0.41956827347048653" blue="0.41956827347048653" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -135,6 +140,11 @@
                 <constraint firstItem="RaM-eg-98Y" firstAttribute="leading" secondItem="FqP-Ot-Scl" secondAttribute="leading" constant="24" id="zjH-aa-50X"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="FqP-Ot-Scl"/>
+            <connections>
+                <outlet property="authorLabel" destination="DOU-f9-dVE" id="9wh-kP-HcU"/>
+                <outlet property="podcastImageView" destination="dq0-97-jK4" id="SYB-63-eIT"/>
+                <outlet property="titleLabel" destination="HHG-KT-zt4" id="ocj-jp-Sbe"/>
+            </connections>
             <point key="canvasLocation" x="26" y="-367"/>
         </view>
     </objects>
