@@ -22,11 +22,16 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tN4-TG-Aak">
                             <rect key="frame" x="14" y="14" width="292" height="36"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-xp-dqr">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-xp-dqr">
                                     <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="36" id="5sR-z2-9Cp"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Podcast " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dg-oJ-ilQ">
                                     <rect key="frame" x="44" y="0.0" width="146" height="36"/>
@@ -53,6 +58,9 @@
                                         <constraint firstAttribute="width" constant="36" id="fp2-0U-lG0"/>
                                     </constraints>
                                     <state key="normal" image="rewind-15"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                 </button>
                             </subviews>
                         </stackView>
@@ -74,6 +82,13 @@
                 <constraint firstItem="FUs-o2-NUy" firstAttribute="top" secondItem="uFp-hp-tnb" secondAttribute="top" id="v3m-nX-sjn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="uFp-hp-tnb"/>
+            <connections>
+                <outlet property="containerView" destination="FUs-o2-NUy" id="rQb-hO-orS"/>
+                <outlet property="episodeImageView" destination="6ZE-xp-dqr" id="Ryi-Kr-0gR"/>
+                <outlet property="episodeTitleLabel" destination="7dg-oJ-ilQ" id="Odh-gX-nIK"/>
+                <outlet property="playButton" destination="Lgu-pZ-fME" id="Jxh-E7-YTp"/>
+                <outlet property="rewindButton" destination="6Fy-fY-4ok" id="19p-mi-RYW"/>
+            </connections>
             <point key="canvasLocation" x="-46.5" y="-72.5"/>
         </view>
     </objects>

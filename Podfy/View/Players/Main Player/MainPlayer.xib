@@ -115,7 +115,10 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9P1-zF-WSd">
                                     <rect key="frame" x="90.5" y="0.0" width="91" height="72"/>
-                                    <state key="normal" image="play"/>
+                                    <state key="normal" image="pause"/>
+                                    <connections>
+                                        <action selector="didPressPlayButton:" destination="uWa-7k-aRU" eventType="touchUpInside" id="JCw-vf-sDq"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPZ-a7-g3J">
                                     <rect key="frame" x="181.5" y="0.0" width="90.5" height="72"/>
@@ -142,6 +145,7 @@
             <viewLayoutGuide key="safeArea" id="FqP-Ot-Scl"/>
             <connections>
                 <outlet property="authorLabel" destination="DOU-f9-dVE" id="9wh-kP-HcU"/>
+                <outlet property="playButton" destination="9P1-zF-WSd" id="ctx-HI-A8e"/>
                 <outlet property="podcastImageView" destination="dq0-97-jK4" id="SYB-63-eIT"/>
                 <outlet property="titleLabel" destination="HHG-KT-zt4" id="ocj-jp-Sbe"/>
             </connections>
@@ -152,7 +156,7 @@
         <image name="arrow" width="50" height="50"/>
         <image name="fast-15" width="50" height="50"/>
         <image name="logo" width="256" height="256"/>
-        <image name="play" width="50" height="50"/>
+        <image name="pause" width="50" height="50"/>
         <image name="rewind-15" width="50" height="50"/>
     </resources>
 </document>

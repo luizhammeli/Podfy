@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/Controller/SearchViewController.swift"
-            timestampString = "549030505.1451679"
+            timestampString = "549114440.080809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -154,7 +154,7 @@
                   moduleName = "Podfy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luizhammerli/Documents/Podfy/Podfy/Service/FirebaseApiService.swift"
-                  timestampString = "549029410.31566"
+                  timestampString = "549109796.873824"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "77"
@@ -169,7 +169,7 @@
                   moduleName = "Podfy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luizhammerli/Documents/Podfy/Podfy/Service/FirebaseApiService.swift"
-                  timestampString = "549029410.318778"
+                  timestampString = "549109796.876151"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "78"
@@ -208,6 +208,22 @@
             startingLineNumber = "85"
             endingLineNumber = "85"
             landmarkName = "checkFavorite(podcast:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Podfy/View/Players/Main Player/MainPlayer.swift"
+            timestampString = "549114440.081427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "didPressPlayButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

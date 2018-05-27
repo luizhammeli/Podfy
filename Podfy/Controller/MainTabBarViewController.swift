@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainTabBarViewController: UITabBarController {
 
@@ -18,7 +19,6 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         setUpViews()
         NotificationCenter.default.addObserver(self, selector: #selector(minimizePlayer), name: NSNotification.Name.minimizePlayerControllerNotificationName, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(showMainPlayerView), name: NSNotification.Name.maximizePlayerControllerNotificationName, object: nil)
         MainTabBarViewController.shared = self
     }
     
@@ -39,10 +39,14 @@ class MainTabBarViewController: UITabBarController {
     }
     
     func showMainPlayerView(_ episode: Episode){
+        self.mainPlayerView.episode = episode
+        maximizePlayer()
+    }
+    
+    func maximizePlayer(){
         topAnchor?.constant = 0
-        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
-            self.mainPlayerView.changeViews(episode, alpha: 0)
             self.view.layoutIfNeeded()
         }, completion: nil)
     }

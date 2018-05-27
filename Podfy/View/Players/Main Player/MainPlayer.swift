@@ -15,10 +15,25 @@ class MainPlayer: UIView{
     @IBOutlet var podcastImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
+    let scale = CGAffineTransform(scaleX: 0.7, y: 0.7)
+    
+    var episode:Episode?{
+        didSet{
+            miniPlayer.alpha = 0
+            guard let episode = episode else {return}
+            titleLabel.text = episode.title
+            authorLabel.text = episode.author
+            guard let url = URL(string: episode.imageUrl) else {return}
+            podcastImageView.sd_setImage(with: url, completed: nil)
+            miniPlayer.episode = episode
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpViews()
+        miniPlayer.containerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didPressMiniPlayerContainerView)))
     }
     
     func setUpViews(){
@@ -32,15 +47,19 @@ class MainPlayer: UIView{
         miniPlayer.alpha = 0
     }
     
+    @objc func didPressMiniPlayerContainerView(){
+        miniPlayer.alpha = 0
+        MainTabBarViewController.shared?.maximizePlayer()
+    }
+    
     @IBAction func didPressMinimizeButton(_ sender: Any) {
         NotificationCenter.default.post(name: .minimizePlayerControllerNotificationName, object: nil)
     }
     
-    func changeViews(_ episodes: Episode, alpha: Int){
-        miniPlayer.alpha = 0
-        titleLabel.text = episodes.title
-        authorLabel.text = episodes.author
-        guard let url = URL(string: episodes.imageUrl) else {return}
-        podcastImageView.sd_setImage(with: url, completed: nil)
-    }
+    @IBAction func didPressPlayButton(_ sender: Any) {
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.podcastImageView.transform = self.scale
+            self.playButton.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+        }, completion: nil)
+          }
 }
