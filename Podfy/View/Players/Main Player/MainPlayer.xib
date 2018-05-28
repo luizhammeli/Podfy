@@ -147,6 +147,7 @@
                 <outlet property="authorLabel" destination="DOU-f9-dVE" id="9wh-kP-HcU"/>
                 <outlet property="playButton" destination="9P1-zF-WSd" id="ctx-HI-A8e"/>
                 <outlet property="podcastImageView" destination="dq0-97-jK4" id="SYB-63-eIT"/>
+                <outlet property="slider" destination="r31-TK-ny6" id="J3v-hW-CGU"/>
                 <outlet property="titleLabel" destination="HHG-KT-zt4" id="ocj-jp-Sbe"/>
             </connections>
             <point key="canvasLocation" x="26" y="-367"/>

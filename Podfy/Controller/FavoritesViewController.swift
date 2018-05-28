@@ -39,6 +39,7 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
             try? Auth.auth().signOut()
             self.dismiss(animated: true, completion: nil)
         }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
     

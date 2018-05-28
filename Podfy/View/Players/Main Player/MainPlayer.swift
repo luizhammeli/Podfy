@@ -16,6 +16,8 @@ class MainPlayer: UIView{
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var slider: UISlider!
+    
     let scale = CGAffineTransform(scaleX: 0.7, y: 0.7)
     
     var episode:Episode?{
