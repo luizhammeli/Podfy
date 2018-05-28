@@ -14,14 +14,13 @@
         <!--Search-->
         <scene sceneID="pg5-Fg-4cq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aSC-gr-OP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="7K8-lD-7r5" customClass="SearchViewController" customModule="Podfy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y4q-af-UYX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="505"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="92" estimatedRowHeight="-1" sectionHeaderHeight="14" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WG4-1i-eD9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="505"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="epN-4Y-9UB" customClass="SearchTableViewCell" customModule="Podfy" customModuleProvider="target">
@@ -44,13 +43,13 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35t-Gv-OZp">
-                                                    <rect key="frame" x="94" y="16" width="205" height="19.5"/>
+                                                    <rect key="frame" x="94" y="16" width="260" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cg-kt-Ctp">
-                                                    <rect key="frame" x="94" y="38.5" width="205" height="18"/>
+                                                    <rect key="frame" x="94" y="38.5" width="260" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="0.93642979449999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -106,20 +105,20 @@
                         <segue destination="pHE-po-9aW" kind="show" identifier="goToEpisodes" id="81B-s6-m16"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSC-gr-OP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4353.75" y="525"/>
         </scene>
         <!--Episodes View Controller-->
         <scene sceneID="dC1-GM-5Yz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wLd-gK-Dho" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="pHE-po-9aW" customClass="EpisodesViewController" customModule="Podfy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eb8-yU-Df7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="505"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zH7-aw-2Te">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="505"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" rowHeight="90" id="Hrj-jZ-dBq" customClass="EpisodeTableViewCell" customModule="Podfy" customModuleProvider="target">
@@ -142,22 +141,22 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mw4-a4-n5w">
-                                                    <rect key="frame" x="90" y="20.5" width="205" height="49"/>
+                                                    <rect key="frame" x="90" y="20.5" width="260" height="49"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 22, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyH-w2-7dM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="205" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.1137254902" green="0.51372549020000002" blue="0.2470588235" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ep 110" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fo-pX-Uc6">
-                                                            <rect key="frame" x="0.0" y="15.5" width="205" height="18"/>
+                                                            <rect key="frame" x="0.0" y="15.5" width="260" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                             <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuE-pI-xT9">
-                                                            <rect key="frame" x="0.0" y="34.5" width="205" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="34.5" width="260" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -205,20 +204,20 @@
                         <outlet property="tableView" destination="zH7-aw-2Te" id="2s1-xd-3KP"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLd-gK-Dho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5366.25" y="130.98591549295776"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="1pt-0T-m4H">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JJj-ZZ-6NV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PRM-4T-ZE2" customClass="FavoritesViewController" customModule="Podfy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZI5-EJ-iEh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="505"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5wg-u5-8ID">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="505"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ecZ-Tm-T75">
                                     <size key="itemSize" width="120" height="170"/>
@@ -304,13 +303,13 @@
                         <segue destination="pHE-po-9aW" kind="show" identifier="goToEpisodes" id="tfw-qV-2Ci"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJj-ZZ-6NV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4353.75" y="-232.3943661971831"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="IPD-MA-8kh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kr0-TM-Cwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="MainTabBarViewController" id="JSN-Pc-PYb" customClass="MainTabBarViewController" customModule="Podfy" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="zSk-Wv-Nwo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -325,18 +324,18 @@
                         <segue destination="PSS-Kc-m1q" kind="relationship" relationship="viewControllers" id="JzJ-Gr-gGT"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kr0-TM-Cwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2348" y="131"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="2e1-53-2eQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gXX-yi-OUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="giZ-Qa-Dnd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="like-unselected" selectedImage="icons8-gostar-filled-50" id="KQK-Vq-7dX"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="like-unselected" selectedImage="like-filled" id="KQK-Vq-7dX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="2f5-i5-xqe">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="93"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -352,18 +351,18 @@
                         <segue destination="PRM-4T-ZE2" kind="relationship" relationship="rootViewController" id="BIs-Pn-TY2"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXX-yi-OUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3356" y="-232"/>
         </scene>
         <!--Search-->
         <scene sceneID="0U1-Si-lul">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SLL-rm-O0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PSS-Kc-m1q" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="search-unselected" selectedImage="search" id="32G-dz-id0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="5kj-Yn-tUl">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="93"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -378,14 +377,15 @@
                         <segue destination="7K8-lD-7r5" kind="relationship" relationship="rootViewController" id="ngq-Dh-FpV"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLL-rm-O0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3354" y="527"/>
         </scene>
     </scenes>
     <resources>
         <image name="gear" width="25" height="25"/>
-        <image name="icons8-gostar-filled-50" width="25" height="25"/>
         <image name="like" width="25" height="25"/>
+        <image name="like-filled" width="25" height="25"/>
         <image name="like-unselected" width="25" height="25"/>
         <image name="logo" width="256" height="256"/>
         <image name="search" width="25" height="25"/>
