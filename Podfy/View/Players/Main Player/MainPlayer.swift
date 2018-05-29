@@ -49,6 +49,7 @@ class MainPlayer: UIView{
         setUpAudioSession()
         addPeriodicTimeObserver()
         addTimeObserver()
+        addNotification()
         //addFeedNotification()
         //addGesturesRecognizer()
 
@@ -107,6 +108,14 @@ class MainPlayer: UIView{
             miniPlayer.setPlayButtonImage(#imageLiteral(resourceName: "play"))
             player.pause()
         }
+    }
+    
+    @IBAction func handleFastButton(_ sender: Any) {
+        fastRewindPodcast(time: 15)
+    }
+    
+    @IBAction func handleRewindButton(_ sender: Any) {
+        fastRewindPodcast(time: -15)
     }
     
     @IBAction func CurrentTimeSliderValueChanged(_ sender: UISlider) {

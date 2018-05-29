@@ -34,6 +34,7 @@
 		73A2402B20B4874000E9D519 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2402A20B4874000E9D519 /* SearchTableViewCell.swift */; };
 		73D037E920BD75F2002682FA /* CMTimeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D037E820BD75F2002682FA /* CMTimeExtensions.swift */; };
 		73D037EC20BD7D5D002682FA /* MainPlayer+AudioExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D037EB20BD7D5D002682FA /* MainPlayer+AudioExtension.swift */; };
+		73D037EE20BDC960002682FA /* MainPlayer+NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D037ED20BDC960002682FA /* MainPlayer+NotificationCenterExtension.swift */; };
 		73E5488E20B5DFAF00F0476A /* MainPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5488D20B5DFAF00F0476A /* MainPlayer.swift */; };
 		73E5489020B5DFC000F0476A /* MainPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E5488F20B5DFC000F0476A /* MainPlayer.xib */; };
 		73E5489420B5ECDF00F0476A /* MiniPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E5489320B5ECDF00F0476A /* MiniPlayer.xib */; };
@@ -81,6 +82,7 @@
 		73A2402A20B4874000E9D519 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		73D037E820BD75F2002682FA /* CMTimeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTimeExtensions.swift; sourceTree = "<group>"; };
 		73D037EB20BD7D5D002682FA /* MainPlayer+AudioExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPlayer+AudioExtension.swift"; sourceTree = "<group>"; };
+		73D037ED20BDC960002682FA /* MainPlayer+NotificationCenterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPlayer+NotificationCenterExtension.swift"; sourceTree = "<group>"; };
 		73E5488D20B5DFAF00F0476A /* MainPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPlayer.swift; sourceTree = "<group>"; };
 		73E5488F20B5DFC000F0476A /* MainPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainPlayer.xib; sourceTree = "<group>"; };
 		73E5489320B5ECDF00F0476A /* MiniPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniPlayer.xib; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				73D037EB20BD7D5D002682FA /* MainPlayer+AudioExtension.swift */,
+				73D037ED20BDC960002682FA /* MainPlayer+NotificationCenterExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				3849829A20AE198C00224AFC /* SignUpViewController.swift in Sources */,
 				73A2402920B4864400E9D519 /* SearchResult.swift in Sources */,
 				3849829120ADCACD00224AFC /* UITextFieldExtensions.swift in Sources */,
+				73D037EE20BDC960002682FA /* MainPlayer+NotificationCenterExtension.swift in Sources */,
 				73A2402720B4708D00E9D519 /* ErrorResult.swift in Sources */,
 				73E5489E20B71A3200F0476A /* DateExtensions.swift in Sources */,
 				73D037EC20BD7D5D002682FA /* MainPlayer+AudioExtension.swift in Sources */,

@@ -51,7 +51,7 @@ extension MainPlayer{
         playAudio(url)
     }
     
-    fileprivate func fastRewindPodcast(time: Int64){
+    func fastRewindPodcast(time: Int64){
         let seekTime = CMTimeAdd(player.currentTime(), CMTimeMake(time, 1))
         player.seek(to: seekTime)
     }
@@ -62,6 +62,4 @@ extension MainPlayer{
         let percent = Float64(value) * currentTimeSeconds
         player.seek(to: CMTimeMakeWithSeconds(percent, 1))
     }
-
-    
 }

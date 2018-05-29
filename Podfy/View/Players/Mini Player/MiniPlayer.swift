@@ -32,7 +32,7 @@ class MiniPlayer: UIView {
             playButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
         }
         
-        //NotificationCenter.default.post(name: .playPauseButtonNotificationName, object: self)
+        NotificationCenter.default.post(name: .playPauseButtonNotificationName, object: self)
     }
     
     override func awakeFromNib() {

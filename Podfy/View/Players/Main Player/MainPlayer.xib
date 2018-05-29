@@ -115,6 +115,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwt-Yb-wqs">
                                     <rect key="frame" x="0.0" y="0.0" width="90.5" height="72"/>
                                     <state key="normal" image="rewind-15"/>
+                                    <connections>
+                                        <action selector="handleRewindButton:" destination="uWa-7k-aRU" eventType="touchUpInside" id="5oM-c6-27b"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9P1-zF-WSd">
                                     <rect key="frame" x="90.5" y="0.0" width="91" height="72"/>
@@ -126,6 +129,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPZ-a7-g3J">
                                     <rect key="frame" x="181.5" y="0.0" width="90.5" height="72"/>
                                     <state key="normal" image="fast-15"/>
+                                    <connections>
+                                        <action selector="handleFastButton:" destination="uWa-7k-aRU" eventType="touchUpInside" id="vyo-GX-FNq"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
