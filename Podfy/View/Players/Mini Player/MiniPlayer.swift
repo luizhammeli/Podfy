@@ -25,7 +25,23 @@ class MiniPlayer: UIView {
         }
     }
     
+    @IBAction func didPressPlayPauseButton(_ sender: Any) {
+        if (playButton.imageView?.image == #imageLiteral(resourceName: "pause")){
+            playButton.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+        }else{
+            playButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+        }
+        
+        //NotificationCenter.default.post(name: .playPauseButtonNotificationName, object: self)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+//        playButton.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+//        rewindButton.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+    }
+    
+    func setPlayButtonImage(_ image: UIImage){
+        playButton.setImage(image, for: .normal)
     }
 }

@@ -100,6 +100,9 @@
                                     <rect key="frame" x="-2" y="24" width="276" height="17"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="maximumTrackTintColor" red="0.41956827347048653" green="0.41956827347048653" blue="0.41956827347048653" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="CurrentTimeSliderValueChanged:" destination="uWa-7k-aRU" eventType="valueChanged" id="z0q-wz-BOP"/>
+                                    </connections>
                                 </slider>
                             </subviews>
                             <constraints>
@@ -145,7 +148,10 @@
             <viewLayoutGuide key="safeArea" id="FqP-Ot-Scl"/>
             <connections>
                 <outlet property="authorLabel" destination="DOU-f9-dVE" id="9wh-kP-HcU"/>
+                <outlet property="currentTimeLabel" destination="HGy-S3-c13" id="Agx-ng-ART"/>
+                <outlet property="mainStackView" destination="RaM-eg-98Y" id="kzK-n1-5Af"/>
                 <outlet property="playButton" destination="9P1-zF-WSd" id="ctx-HI-A8e"/>
+                <outlet property="podcastDurationLabel" destination="7TX-Cz-pee" id="ibZ-cH-aXn"/>
                 <outlet property="podcastImageView" destination="dq0-97-jK4" id="SYB-63-eIT"/>
                 <outlet property="slider" destination="r31-TK-ny6" id="J3v-hW-CGU"/>
                 <outlet property="titleLabel" destination="HHG-KT-zt4" id="ocj-jp-Sbe"/>

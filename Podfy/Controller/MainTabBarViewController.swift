@@ -47,6 +47,7 @@ class MainTabBarViewController: UITabBarController {
         topAnchor?.constant = 0
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
+
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
@@ -54,7 +55,6 @@ class MainTabBarViewController: UITabBarController {
     @objc func minimizePlayer(){
         topAnchor?.constant = self.view.frame.height-(64+self.tabBar.frame.height)
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
-            self.mainPlayerView.miniPlayer.alpha = 1
             self.tabBar.transform = .identity
             self.view.layoutIfNeeded()
         }, completion: nil)
