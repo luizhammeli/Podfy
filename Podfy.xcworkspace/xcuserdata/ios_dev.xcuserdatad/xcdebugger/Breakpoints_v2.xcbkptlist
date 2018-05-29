@@ -506,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/Controller/MainTabBarViewController.swift"
-            timestampString = "549309149.0445091"
+            timestampString = "549313828.469835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "maximizePlayer()"
             landmarkType = "7">
             <Locations>
@@ -554,7 +554,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/View/Players/Mini Player/MiniPlayer.swift"
-            timestampString = "549309149.044572"
+            timestampString = "549313828.469946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -570,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/View/Players/Main Player/MainPlayer.swift"
-            timestampString = "549309149.044643"
+            timestampString = "549313828.470021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "didPressPlayButton(_:)"
             landmarkType = "7">
          </BreakpointContent>

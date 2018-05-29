@@ -69,7 +69,8 @@ class MainPlayer: UIView{
     }
         
     func playAudio(_ url: URL){
-        playButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+        playButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)        
+        miniPlayer.setPlayButtonImage(#imageLiteral(resourceName: "pause"))
         let avItem = AVPlayerItem(url: url)
         player.replaceCurrentItem(with: avItem)
         player.play()
@@ -85,14 +86,10 @@ class MainPlayer: UIView{
     }
     
     @objc func didPressMiniPlayerContainerView(){
-        miniPlayer.alpha = 0
-        mainStackView.alpha = 1
         MainTabBarViewController.shared?.maximizePlayer()
     }
     
     @IBAction func didPressMinimizeButton(_ sender: Any) {
-        miniPlayer.alpha = 1
-        mainStackView.alpha = 0
         NotificationCenter.default.post(name: .minimizePlayerControllerNotificationName, object: nil)
     }
     

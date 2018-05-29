@@ -45,19 +45,21 @@ class MainTabBarViewController: UITabBarController {
     
     func maximizePlayer(){
         topAnchor?.constant = 0
+        self.mainPlayerView.miniPlayer.alpha = 0
+        self.mainPlayerView.mainStackView.alpha = 1
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
-            self.mainPlayerView.miniPlayer.alpha = 0
-            self.mainPlayerView.mainStackView.alpha = 1
+
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
     
     @objc func minimizePlayer(){
+        self.mainPlayerView.miniPlayer.alpha = 1
+        self.mainPlayerView.mainStackView.alpha = 0
         topAnchor?.constant = self.view.frame.height-(64+self.tabBar.frame.height)
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
-            self.mainPlayerView.miniPlayer.alpha = 1
-            self.mainPlayerView.mainStackView.alpha = 0
+
             self.tabBar.transform = .identity
             self.view.layoutIfNeeded()
         }, completion: nil)
