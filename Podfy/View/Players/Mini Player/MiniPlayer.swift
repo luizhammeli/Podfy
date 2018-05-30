@@ -37,11 +37,13 @@ class MiniPlayer: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        playButton.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-//        rewindButton.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
     }
     
     func setPlayButtonImage(_ image: UIImage){
         playButton.setImage(image, for: .normal)
+    }
+    
+    @IBAction func didPressRewindButton(_ sender: Any) {        
+        NotificationCenter.default.post(name: .fastForwardNotificationName, object: self)
     }
 }

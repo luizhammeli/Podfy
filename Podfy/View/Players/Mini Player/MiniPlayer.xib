@@ -64,6 +64,9 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didPressRewindButton:" destination="RkA-Nl-obY" eventType="touchUpInside" id="wKI-di-8XP"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

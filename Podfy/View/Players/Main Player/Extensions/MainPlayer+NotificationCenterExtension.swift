@@ -17,5 +17,6 @@ extension NSNotification.Name{
 extension MainPlayer{
     func addNotification(){
         NotificationCenter.default.addObserver(self, selector: #selector(didPressPlayButton), name: NSNotification.Name.playPauseButtonNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleRewindButton), name: NSNotification.Name.fastForwardNotificationName, object: nil)
     }
 }
