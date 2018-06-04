@@ -49,7 +49,6 @@ class MainTabBarViewController: UITabBarController {
         self.mainPlayerView.mainStackView.alpha = 1
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
-
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
@@ -59,7 +58,6 @@ class MainTabBarViewController: UITabBarController {
         self.mainPlayerView.mainStackView.alpha = 0
         topAnchor?.constant = self.view.frame.height-(64+self.tabBar.frame.height)
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
-
             self.tabBar.transform = .identity
             self.view.layoutIfNeeded()
         }, completion: nil)

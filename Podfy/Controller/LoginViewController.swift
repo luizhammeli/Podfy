@@ -53,6 +53,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didPressLoginButton(_ sender: Any) {
+        self.view.endEditing(true)  
         guard let email = emailTextField.text, let password = passwordTextField.text else {return}
         appDelegate?.customActivityIndicator.showActivityIndicator()
         FirebaseApiService.shared.defaultLogin(email, password: password) { (user, error) in
