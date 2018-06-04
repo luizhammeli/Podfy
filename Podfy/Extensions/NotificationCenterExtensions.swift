@@ -9,6 +9,6 @@
 import Foundation
 
 extension NSNotification.Name{
-    static let minimizePlayerControllerNotificationName = NSNotification.Name(rawValue: "minimizePlayerController")
-    static let maximizePlayerControllerNotificationName = NSNotification.Name(rawValue: "maximizePlayerControllerNotificationName")
+    static let minimizePlayerControllerNotificationName = NSNotification.Name(rawValue: Strings.minimizePlayerController)
+    static let maximizePlayerControllerNotificationName = NSNotification.Name(rawValue: Strings.maximizePlayerControllerNotificationName)
 }

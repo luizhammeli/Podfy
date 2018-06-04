@@ -15,7 +15,7 @@ class ForgotPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.setUpTextFieldAttributes(placeholderText: "E-mail")
+        emailTextField.setUpTextFieldAttributes(placeholderText: Strings.emailPlaceHolderLabel)
     }
     
     @IBAction func didPressSendButton(_ sender: Any) {
@@ -24,10 +24,10 @@ class ForgotPasswordViewController: UIViewController {
         FirebaseApiService.shared.resetPassword(email) { (error) in
             self.appDelegalte?.customActivityIndicator.hideActivityIndicator()
             if let error = error{
-                CustomAlertController.showCustomAlert("Reset Password", message: error.localizedDescription.description, delegate: self)
+                CustomAlertController.showCustomAlert(Strings.resetPassword, message: error.localizedDescription.description, delegate: self)
             }
             
-            CustomAlertController.showCustomAlert("Reset Password", message: "Please check your e-mail and follow the instructions.", delegate: self)
+            CustomAlertController.showCustomAlert(Strings.resetPassword, message: Strings.resetPasswordMessage, delegate: self)
         }
     }
 }

@@ -11,7 +11,6 @@ import UIKit
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var searchResultTableView: UITableView!
-    let cellID = "cellID"
     let searchController = UISearchController(searchResultsController: nil)
     var timer: Timer?
     var podcasts = [Podcast]()
@@ -21,6 +20,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         setUpSearchController()
         self.searchResultTableView.tableFooterView = UIView()
+        
     }
     
     //MARK:- SearchBar
@@ -41,7 +41,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.searchResultTableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SearchTableViewCell
+        let cell = self.searchResultTableView.dequeueReusableCell(withIdentifier: Strings.cellID, for: indexPath) as! SearchTableViewCell
         cell.podcast = podcasts[indexPath.item]
         return cell
     }
@@ -83,7 +83,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "goToEpisodes", sender: podcasts[indexPath.item])
+        self.performSegue(withIdentifier: Strings.goToEpisodes, sender: podcasts[indexPath.item])
         self.searchResultTableView.deselectRow(at: indexPath, animated: true)        
     }
     
@@ -92,7 +92,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier != "goToEpisodes"){return}        
+        if (segue.identifier != Strings.goToEpisodes){return}        
         guard let episodesController = segue.destination as? EpisodesViewController else {return}
         guard let podcast = sender as? Podcast else {return}
         episodesController.podcast = podcast

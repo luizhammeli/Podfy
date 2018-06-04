@@ -17,9 +17,9 @@ class Podcast: NSObject,Codable {
     
     convenience init(_ dic: [String: Any]) {
         self.init()
-        self.trackName = dic["trackName"] as? String ?? ""
-        self.artistName = dic["artistName"] as? String ?? ""
-        self.artworkUrl600 = dic["podcast"] as? String ?? ""
-        self.feedUrl = dic["feedUrl"] as? String ?? ""
+        self.trackName = dic[Strings.trackName] as? String ?? ""
+        self.artistName = dic[Strings.artistName] as? String ?? ""
+        self.artworkUrl600 = dic[Strings.podcast] as? String ?? ""
+        self.feedUrl = dic[Strings.feedUrl] as? String ?? ""
     }
 }

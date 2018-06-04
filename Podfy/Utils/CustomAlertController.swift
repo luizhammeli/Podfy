@@ -12,7 +12,7 @@ class CustomAlertController {
     
     static func showCustomAlert(_ title: String, message: String, delegate: UIViewController){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alertController.addAction(UIAlertAction(title: Strings.okAlertMessage, style: .default, handler: nil))
         delegate.present(alertController, animated: true, completion: nil)
     }
 }

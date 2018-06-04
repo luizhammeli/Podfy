@@ -18,9 +18,9 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.setUpTextFieldAttributes(placeholderText: "E-mail")
-        passwordTextField.setUpTextFieldAttributes(placeholderText: "Password")
-        nameTextField.setUpTextFieldAttributes(placeholderText: "Name")        
+        emailTextField.setUpTextFieldAttributes(placeholderText: Strings.emailPlaceHolderLabel)
+        passwordTextField.setUpTextFieldAttributes(placeholderText: Strings.passwordPlaceHolderLabel)
+        nameTextField.setUpTextFieldAttributes(placeholderText: Strings.namePlaceHolderLabel)
     }
     
     @IBAction func didPressSignUp(){
@@ -49,10 +49,10 @@ class SignUpViewController: UIViewController {
         
         if let error = error{
             print("Error Create New User: \(error)")
-            CustomAlertController.showCustomAlert("Error", message: error.localizedDescription.description, delegate: self)
+            CustomAlertController.showCustomAlert(Strings.errorMessage, message: error.localizedDescription.description, delegate: self)
         }
         
-        guard let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarViewController") as? MainTabBarViewController else {return}
+        guard let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: Strings.mainTabBarViewController) as? MainTabBarViewController else {return}
         self.present(mainTabController, animated: true, completion: nil)
         self.navigationController?.popToRootViewController(animated: true)
     }    

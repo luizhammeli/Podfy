@@ -27,7 +27,7 @@ class MainTabBarViewController: UITabBarController {
     }
     
     func setUpViews(){
-        mainPlayerView = Bundle.main.loadNibNamed("MainPlayer", owner: self, options: nil)?.first as! MainPlayer
+        mainPlayerView = Bundle.main.loadNibNamed(Strings.mainPlayer, owner: self, options: nil)?.first as! MainPlayer
         mainPlayerView.translatesAutoresizingMaskIntoConstraints = false
         self.view.insertSubview(mainPlayerView, belowSubview: tabBar)
         

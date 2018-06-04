@@ -13,8 +13,7 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var tableView: UITableView!
     @IBOutlet var likeBarButton: UIBarButtonItem!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
-    let cellID = "cellID"
+    
     var podcast: Podcast?
     var episodes = [Episode]()
     var isFavorite = false
@@ -52,7 +51,7 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! EpisodeTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: Strings.cellID, for: indexPath) as! EpisodeTableViewCell
         cell.episode = episodes[indexPath.item]
         return cell
     }
@@ -95,21 +94,21 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
     
     func removeFavorite(_ error: Error?){
         if let error = error{
-            CustomAlertController.showCustomAlert("Erro", message: error.localizedDescription.description, delegate: self)
+            CustomAlertController.showCustomAlert(Strings.error, message: error.localizedDescription.description, delegate: self)
             return
         }
         self.likeBarButton.image = #imageLiteral(resourceName: "like")
         self.isFavorite = false
-        CustomAlertController.showCustomAlert("Favoritos", message: "Conteúdo removido com sucesso", delegate: self)
+        CustomAlertController.showCustomAlert(Strings.favorites, message: Strings.favoriteRemoved, delegate: self)
     }
     
     func addFavorite(_ error: Error?){
         if let error = error{
-            CustomAlertController.showCustomAlert("Erro", message: error.localizedDescription.description, delegate: self)
+            CustomAlertController.showCustomAlert(Strings.error, message: error.localizedDescription.description, delegate: self)
             return
         }
         self.likeBarButton.image = #imageLiteral(resourceName: "like-filled-50")
         self.isFavorite = true
-        CustomAlertController.showCustomAlert("Favoritos", message: "Conteúdo adicionado com sucesso", delegate: self)
+        CustomAlertController.showCustomAlert(Strings.favorites, message: Strings.favoriteAdded, delegate: self)
     }
 }

@@ -28,8 +28,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         setUpContainerView()
-        emailTextField.setUpTextFieldAttributes(placeholderText: "E-mail")
-        passwordTextField.setUpTextFieldAttributes(placeholderText: "Password")
+        emailTextField.setUpTextFieldAttributes(placeholderText: Strings.emailPlaceHolderLabel)
+        passwordTextField.setUpTextFieldAttributes(placeholderText: Strings.passwordPlaceHolderLabel)
         signUpButton.setUpSignUpAttributesText()             
     }
     
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(true)
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         if (Auth.auth().currentUser != nil){
-            self.performSegue(withIdentifier: "goToMainTabController", sender: self)
+            self.performSegue(withIdentifier: Strings.goToMainTabController, sender: self)
         }else{
             navigationController?.isNavigationBarHidden = false
             containerView.removeFromSuperview()
@@ -58,10 +58,10 @@ class LoginViewController: UIViewController {
         FirebaseApiService.shared.defaultLogin(email, password: password) { (user, error) in
             self.appDelegate?.customActivityIndicator.hideActivityIndicator()
             if let error = error{
-                CustomAlertController.showCustomAlert("Login Error", message: error.localizedDescription.description, delegate: self)
+                CustomAlertController.showCustomAlert(Strings.loginErrorMessage, message: error.localizedDescription.description, delegate: self)
                 return
             }            
-            self.performSegue(withIdentifier: "goToMainTabController", sender: self)
+            self.performSegue(withIdentifier: Strings.goToMainTabController, sender: self)
         }
     }
     
@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
             if error != nil {
                 return
             }
-            self.performSegue(withIdentifier: "goToMainTabController", sender: self)
+            self.performSegue(withIdentifier: Strings.goToMainTabController, sender: self)
         }
     }
 }

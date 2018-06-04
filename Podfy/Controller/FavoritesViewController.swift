@@ -12,7 +12,6 @@ import FirebaseAuth
 class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     @IBOutlet weak var collectionView: UICollectionView!
-    let cellID = "cellID"
     var podcasts = [Podcast]()
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
@@ -34,12 +33,12 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     @IBAction func logOut(_ sender: Any) {
-        let alertController = UIAlertController(title: "", message: "Settings", preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: "Sign Out", style: .default, handler: { (alert) in
+        let alertController = UIAlertController(title: "", message: Strings.settings, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: Strings.signOut, style: .default, handler: { (alert) in
             try? Auth.auth().signOut()
             self.dismiss(animated: true, completion: nil)
         }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        alertController.addAction(UIAlertAction(title: Strings.cancel, style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -48,7 +47,7 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! FavoritesCollectionViewCell
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: Strings.cellID, for: indexPath) as! FavoritesCollectionViewCell
         cell.podcast = podcasts[indexPath.item]
         return cell
     }
@@ -71,12 +70,12 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "goToEpisodes", sender: podcasts[indexPath.item])
+        self.performSegue(withIdentifier: Strings.goToEpisodes, sender: podcasts[indexPath.item])
         self.collectionView.deselectItem(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier != "goToEpisodes"){return}
+        if (segue.identifier != Strings.goToEpisodes){return}
         guard let episodesController = segue.destination as? EpisodesViewController else {return}
         guard let podcast = sender as? Podcast else {return}
         episodesController.podcast = podcast

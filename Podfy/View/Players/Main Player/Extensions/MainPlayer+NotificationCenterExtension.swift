@@ -10,8 +10,8 @@ import Foundation
 
 
 extension NSNotification.Name{
-    static let playPauseButtonNotificationName = NSNotification.Name(rawValue: "playPauseButton")
-    static let fastForwardNotificationName = NSNotification.Name(rawValue: "fastForward")
+    static let playPauseButtonNotificationName = NSNotification.Name(rawValue: Strings.playPauseButton)
+    static let fastForwardNotificationName = NSNotification.Name(rawValue: Strings.fastForward)
 }
 
 extension MainPlayer{
