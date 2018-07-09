@@ -25,8 +25,12 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         appDelegate?.customActivityIndicator.showActivityIndicator()        
-        FirebaseApiService.shared.fetchFavorites { (podcasts) in
+        FirebaseApiService.shared.fetchFavorites { (podcasts, errorMessage) in
             self.appDelegate?.customActivityIndicator.hideActivityIndicator()
+            if let message = errorMessage{
+                CustomAlertController.showCustomAlert(message, message: "Please check your network connection.", delegate: self)
+                return
+            }
             self.podcasts = podcasts
             if(!self.podcasts.isEmpty){
                 self.collectionView.reloadData()

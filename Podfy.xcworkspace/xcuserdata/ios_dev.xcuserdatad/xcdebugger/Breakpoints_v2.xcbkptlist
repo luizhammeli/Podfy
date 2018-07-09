@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/Controller/FavoritesViewController.swift"
-            timestampString = "552850929.193944"
+            timestampString = "552853704.7614909"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/Controller/FavoritesViewController.swift"
-            timestampString = "552850929.19862"
+            timestampString = "552853704.7615581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/Controller/FavoritesViewController.swift"
-            timestampString = "552850929.198833"
+            timestampString = "552853704.761628"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/Service/FirebaseApiService.swift"
-            timestampString = "552850929.199011"
+            timestampString = "552853704.761676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
@@ -122,38 +122,54 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/Service/FirebaseApiService.swift"
-            timestampString = "552850929.199487"
+            timestampString = "552853704.761727"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
             landmarkName = "fetchFavorites(handler:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Podfy/Service/FirebaseApiService.swift"
+            timestampString = "552853704.761775"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "fetchFavorites(handler:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Podfy.FirebaseApiService.fetchFavorites(handler: (Swift.Array&lt;Podfy.Podcast&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Podfy.FirebaseApiService.fetchFavorites(handler: (Swift.Array&lt;Podfy.Podcast&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Podfy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ios_dev/Podfy/Podfy/Service/FirebaseApiService.swift"
-                  timestampString = "552850929.362859"
+                  timestampString = "552853568.553084"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "392">
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "636">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in Podfy.FirebaseApiService.fetchFavorites(handler: (Swift.Array&lt;Podfy.Podcast&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in Podfy.FirebaseApiService.fetchFavorites(handler: (Swift.Array&lt;Podfy.Podcast&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Podfy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ios_dev/Podfy/Podfy/Service/FirebaseApiService.swift"
-                  timestampString = "552850929.3649991"
+                  timestampString = "552853568.555249"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "91"
@@ -170,59 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/Service/FirebaseApiService.swift"
-            timestampString = "552850929.199801"
+            timestampString = "552853704.761819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "fetchFavorites(handler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Podfy.FirebaseApiService.fetchFavorites(handler: (Swift.Array&lt;Podfy.Podcast&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Podfy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ios_dev/Podfy/Podfy/Service/FirebaseApiService.swift"
-                  timestampString = "552850929.371083"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "424">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in Podfy.FirebaseApiService.fetchFavorites(handler: (Swift.Array&lt;Podfy.Podcast&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Podfy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ios_dev/Podfy/Podfy/Service/FirebaseApiService.swift"
-                  timestampString = "552850929.373509"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Podfy/Service/FirebaseApiService.swift"
-            timestampString = "552850929.20008"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "fetchFavorites(handler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,43 +202,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/Service/FirebaseApiService.swift"
-            timestampString = "552850929.200364"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "fetchFavorites(handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Podfy/Service/FirebaseApiService.swift"
-            timestampString = "552850929.200681"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "fetchFavorites(handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Podfy/Service/FirebaseApiService.swift"
-            timestampString = "552850929.201015"
+            timestampString = "552853704.761862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "100"
             endingLineNumber = "100"
+            landmarkName = "fetchFavorites(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Podfy/Service/FirebaseApiService.swift"
+            timestampString = "552853704.761905"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "fetchFavorites(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Podfy/Service/FirebaseApiService.swift"
+            timestampString = "552853704.7619489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "fetchFavorites(handler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -298,7 +266,7 @@
                   moduleName = "Podfy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ios_dev/Podfy/Podfy/Controller/EpisodesViewController.swift"
-                  timestampString = "552850929.396925"
+                  timestampString = "552853568.58845"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -313,7 +281,7 @@
                   moduleName = "Podfy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ios_dev/Podfy/Podfy/Controller/EpisodesViewController.swift"
-                  timestampString = "552850929.399181"
+                  timestampString = "552853568.590035"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "41"
@@ -346,7 +314,7 @@
                   moduleName = "Podfy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ios_dev/Podfy/Podfy/Controller/MainTabBarViewController.swift"
-                  timestampString = "552850929.404092"
+                  timestampString = "552853568.606487"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
@@ -361,7 +329,7 @@
                   moduleName = "Podfy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ios_dev/Podfy/Podfy/Controller/MainTabBarViewController.swift"
-                  timestampString = "552850929.406341"
+                  timestampString = "552853568.60827"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -410,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Podfy/Controller/FavoritesViewController.swift"
-            timestampString = "552850929.20151"
+            timestampString = "552853704.762058"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>

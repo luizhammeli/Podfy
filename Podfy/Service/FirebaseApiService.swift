@@ -86,18 +86,21 @@ class FirebaseApiService {
         }
     }
     
-    func fetchFavorites(handler: @escaping (_ podcasts: [Podcast])->Void){
+    func fetchFavorites(handler: @escaping (_ podcasts: [Podcast], _ errorMessage: String?)->Void){
         guard let id = Auth.auth().currentUser?.uid else {return}
-        var podcasts = [Podcast]()
+        var podcasts = [Podcast]()        
+        if (!ApiService.shared.isConnectedToNetwork()){
+            handler(podcasts, "Network Error")
+        }
         Database.database().reference().child("favorite").child(id).observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let dictionaries = snapshot.value as? [String: Any] else {handler(podcasts); return}
+            guard let dictionaries = snapshot.value as? [String: Any] else {handler(podcasts, nil); return}
             dictionaries.forEach({(key: String, value: Any) in
-                guard let podcastDict = value as? [String: Any] else {handler(podcasts); return}
+                guard let podcastDict = value as? [String: Any] else {handler(podcasts, nil); return}
                 podcasts.append(Podcast(podcastDict))
             })
-            handler(podcasts)
+            handler(podcasts, nil)
         }) { (error) in
-            handler(podcasts)
+            handler(podcasts, nil)
         }
     }
 }
