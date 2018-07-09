@@ -28,7 +28,9 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
         FirebaseApiService.shared.fetchFavorites { (podcasts) in
             self.appDelegate?.customActivityIndicator.hideActivityIndicator()
             self.podcasts = podcasts
-            self.collectionView.reloadData()
+            if(!self.podcasts.isEmpty){
+                self.collectionView.reloadData()
+            }            
         }
     }
     

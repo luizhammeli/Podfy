@@ -52,8 +52,13 @@ class SignUpViewController: UIViewController {
             CustomAlertController.showCustomAlert(Strings.errorMessage, message: error.localizedDescription.description, delegate: self)
         }
         
-        guard let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: Strings.mainTabBarViewController) as? MainTabBarViewController else {return}
+        let contentStoryboard = UIStoryboard(name: Strings.contentStoryboard, bundle: nil)
+        guard let mainTabController = contentStoryboard.instantiateViewController(withIdentifier: Strings.mainTabBarViewController) as? MainTabBarViewController else {return}
         self.present(mainTabController, animated: true, completion: nil)
         self.navigationController?.popToRootViewController(animated: true)
-    }    
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

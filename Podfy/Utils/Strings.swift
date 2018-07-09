@@ -44,6 +44,7 @@ class Strings{
     
     //MARK: StoryBoard ID
     static let mainTabBarViewController = "MainTabBarViewController"
+    static let contentStoryboard = "ContentStoryboard"
     static let mainPlayer = "MainPlayer"
     
     //MARK: Cell ID

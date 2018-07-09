@@ -90,9 +90,9 @@ class FirebaseApiService {
         guard let id = Auth.auth().currentUser?.uid else {return}
         var podcasts = [Podcast]()
         Database.database().reference().child("favorite").child(id).observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let dictionaries = snapshot.value as? [String: Any] else {return}
+            guard let dictionaries = snapshot.value as? [String: Any] else {handler(podcasts); return}
             dictionaries.forEach({(key: String, value: Any) in
-                guard let podcastDict = value as? [String: Any] else {return}
+                guard let podcastDict = value as? [String: Any] else {handler(podcasts); return}
                 podcasts.append(Podcast(podcastDict))
             })
             handler(podcasts)
