@@ -38,8 +38,9 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
     func fetchEpisodes(){
         appDelegate.customActivityIndicator.showActivityIndicator()
         ApiService.shared.fetchEpisodes(podcast: podcast) { (episodes, errorMessage) in
-            self.appDelegate.customActivityIndicator.hideActivityIndicator()
+            
             DispatchQueue.main.async {
+                self.appDelegate.customActivityIndicator.hideActivityIndicator()
                 if let errorMessage = errorMessage{
                     CustomAlertController.showCustomAlert(errorMessage, message: Strings.networkErrorMessage , delegate: self)
                     return
