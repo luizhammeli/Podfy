@@ -22,7 +22,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tN4-TG-Aak">
                             <rect key="frame" x="14" y="14" width="292" height="36"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-xp-dqr">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-xp-dqr">
                                     <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="36" id="5sR-z2-9Cp"/>
@@ -96,7 +96,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo" width="256" height="256"/>
         <image name="play" width="50" height="50"/>
         <image name="rewind-15" width="50" height="50"/>
     </resources>
