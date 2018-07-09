@@ -28,7 +28,7 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
         FirebaseApiService.shared.fetchFavorites { (podcasts, errorMessage) in
             self.appDelegate?.customActivityIndicator.hideActivityIndicator()
             if let message = errorMessage{
-                CustomAlertController.showCustomAlert(message, message: "Please check your network connection.", delegate: self)
+                CustomAlertController.showCustomAlert(message, message: Strings.networkErrorMessage, delegate: self)
                 return
             }
             self.podcasts = podcasts

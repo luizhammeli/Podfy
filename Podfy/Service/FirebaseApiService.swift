@@ -91,6 +91,7 @@ class FirebaseApiService {
         var podcasts = [Podcast]()        
         if (!ApiService.shared.isConnectedToNetwork()){
             handler(podcasts, "Network Error")
+            return
         }
         Database.database().reference().child("favorite").child(id).observeSingleEvent(of: .value, with: { (snapshot) in
             guard let dictionaries = snapshot.value as? [String: Any] else {handler(podcasts, nil); return}
