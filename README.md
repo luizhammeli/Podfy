@@ -30,3 +30,4 @@ O Podfy é um aplicativo que utiliza a API de busca de Podcasts disponíveis no 
   - Alamofire
   - SDWebImage
   - FeedKit
+  - ReachabilitySwift
