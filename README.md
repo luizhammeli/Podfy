@@ -14,11 +14,14 @@ O Podfy é um aplicativo que utiliza a API de busca de Podcasts disponíveis no 
   <img height="35%" width="35%" vspace="20" hspace="20" src="https://user-images.githubusercontent.com/12848020/42481840-d2a85606-83ba-11e8-8eba-93f812d413ce.png" />
 </p>
 
-# Requisitos
+## Arquitetura do Projeto
+ - MVC
+
+## Requisitos
 - Xcode 9.2
 - Swift 4.0
 
-# Dependencias Usadas (Podfile):
+## Dependencias Usadas (Podfile):
   - Firebase/Core
   - Firebase/Auth
   - FBSDKLoginKit
