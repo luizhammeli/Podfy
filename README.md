@@ -1,6 +1,6 @@
 # Podfy
 
-O Podfy é um aplicativo que utiliza a API de busca de Podcasts disponíveis no iTunes forncendo suporte para reprodução de áudio, além de outras funcionalidades como favoritar seus podcasts favoritos, que ficarão organizados em uma nova lista facilitando seu acesso.
+O Podfy é um aplicativo que utiliza a API de busca de Podcasts disponíveis no iTunes forncendo suporte para reprodução de áudio, além de outras funcionalidades como favoritar seus podcasts preferidos, que ficarão organizados em uma nova lista facilitando seu acesso.
 
 ## Implementação
 
