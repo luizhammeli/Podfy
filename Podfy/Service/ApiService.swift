@@ -35,13 +35,13 @@ class ApiService {
         }
     }
     
-    func fetchEpisodes(podcast: Podcast?, completionHandler: @escaping (([Episode], String?)->Void)){
+    func fetchEpisodes(podcast: Podcast?, completionHandler: @escaping (([Episode])->Void)){
         guard let stringUrl = podcast?.feedUrl else {return}
         guard let url = URL(string: stringUrl) else {return}
         var episodes = [Episode]()
         
         if(!isConnectedToNetwork()){
-            completionHandler(episodes, "Network Error")
+            completionHandler(episodes)
             return
         }
         
@@ -58,7 +58,7 @@ class ApiService {
                     episodes = rss.getFeedEpisodes()
                 }
                 
-                completionHandler(episodes, nil)
+                completionHandler(episodes)
             })
         }
     }

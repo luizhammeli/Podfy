@@ -26,6 +26,7 @@
 		38FB03A820ACC6C000723554 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03A620ACC6C000723554 /* Login.storyboard */; };
 		38FB03AA20ACC6C200723554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03A920ACC6C200723554 /* Assets.xcassets */; };
 		38FB03AD20ACC6C200723554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FB03AB20ACC6C200723554 /* LaunchScreen.storyboard */; };
+		73606E3B20F4DC140019E404 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73606E3A20F4DC140019E404 /* CustomViewController.swift */; };
 		73A2402020B447CD00E9D519 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2401F20B447CD00E9D519 /* Podcast.swift */; };
 		73A2402320B448BA00E9D519 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2402220B448BA00E9D519 /* CustomLabel.swift */; };
 		73A2402520B44EA700E9D519 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2402420B44EA700E9D519 /* ApiService.swift */; };
@@ -73,6 +74,7 @@
 		38FB03AE20ACC6C200723554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566E8005BDDF5C918C215E1F /* Pods-Podfy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podfy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Podfy/Pods-Podfy.debug.xcconfig"; sourceTree = "<group>"; };
 		6D9969B2083612C8E9C873AB /* Pods-Podfy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podfy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podfy/Pods-Podfy.release.xcconfig"; sourceTree = "<group>"; };
+		73606E3A20F4DC140019E404 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		73A2401F20B447CD00E9D519 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		73A2402220B448BA00E9D519 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		73A2402420B44EA700E9D519 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				38F1729F20B2214700F4D1CC /* SearchViewController.swift */,
 				3842374320AF6BAE00978E12 /* ForgotPasswordViewController.swift */,
 				73E5489520B6E70F00F0476A /* EpisodesViewController.swift */,
+				73606E3A20F4DC140019E404 /* CustomViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -409,6 +413,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -451,6 +456,7 @@
 				38A9533820AEEBE1005B8C71 /* CustomActivityIndicator.swift in Sources */,
 				38FB03A520ACC6C000723554 /* LoginViewController.swift in Sources */,
 				73E5489C20B70D6100F0476A /* FeedkitExtensions.swift in Sources */,
+				73606E3B20F4DC140019E404 /* CustomViewController.swift in Sources */,
 				73F50C7620B87E8200FD7466 /* MiniPlayer.swift in Sources */,
 				3842374420AF6BAE00978E12 /* ForgotPasswordViewController.swift in Sources */,
 				3842374220AF03D500978E12 /* FavoritesViewController.swift in Sources */,

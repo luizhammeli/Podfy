@@ -39,8 +39,10 @@ class CustomActivityIndicator: UIView {
     }
     
     func hideActivityIndicator(){
-        backgroundView.removeFromSuperview()
-        activityIndicator.stopAnimating()
+        if(activityIndicator.isAnimating){
+            backgroundView.removeFromSuperview()
+            activityIndicator.stopAnimating()
+        }
     }
     
     func setUpView(){

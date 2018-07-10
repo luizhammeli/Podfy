@@ -8,11 +8,10 @@
 
 import UIKit
 
-class EpisodesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EpisodesViewController: CustomViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var likeBarButton: UIBarButtonItem!
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    @IBOutlet var likeBarButton: UIBarButtonItem!    
     
     var podcast: Podcast?
     var episodes = [Episode]()
@@ -36,14 +35,10 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func fetchEpisodes(){
-        appDelegate.customActivityIndicator.showActivityIndicator()
-        ApiService.shared.fetchEpisodes(podcast: podcast) { (episodes, errorMessage) in            
+        appDelegate?.customActivityIndicator.showActivityIndicator()
+        ApiService.shared.fetchEpisodes(podcast: podcast) { (episodes) in
             DispatchQueue.main.async {
-                self.appDelegate.customActivityIndicator.hideActivityIndicator()
-                if let errorMessage = errorMessage{
-                    CustomAlertController.showCustomAlert(errorMessage, message: Strings.networkErrorMessage , delegate: self)
-                    return
-                }
+                self.appDelegate?.customActivityIndicator.hideActivityIndicator()
                 self.episodes = episodes
                 self.tableView.reloadData()
             }            
@@ -81,17 +76,17 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func didPressLikeButton(_ sender: Any) {
         guard let podcast = podcast else {return}
-        appDelegate.customActivityIndicator.showActivityIndicator()
+        appDelegate?.customActivityIndicator.showActivityIndicator()
         if (isFavorite){
             FirebaseApiService.shared.removeFavoriteInDatabase(podcast: podcast) { (error, _) in
-                self.appDelegate.customActivityIndicator.hideActivityIndicator()
+                self.appDelegate?.customActivityIndicator.hideActivityIndicator()
                 self.removeFavorite(error)
             }
             return
         }
         
         FirebaseApiService.shared.saveFavoriteInDatabase(podcast: podcast) { (error, reference) in
-            self.appDelegate.customActivityIndicator.hideActivityIndicator()
+            self.appDelegate?.customActivityIndicator.hideActivityIndicator()
             self.addFavorite(error)
         }
     }

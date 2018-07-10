@@ -9,28 +9,24 @@
 import UIKit
 import FirebaseAuth
 
-class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class FavoritesViewController: CustomViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var podcasts = [Podcast]()
-    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    var podcasts = [Podcast]()    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .black
+        addNotification()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         appDelegate?.customActivityIndicator.showActivityIndicator()        
-        FirebaseApiService.shared.fetchFavorites { (podcasts, errorMessage) in
+        FirebaseApiService.shared.fetchFavorites { (podcasts) in
             self.appDelegate?.customActivityIndicator.hideActivityIndicator()
-            if let message = errorMessage{
-                CustomAlertController.showCustomAlert(message, message: Strings.networkErrorMessage, delegate: self)
-                return
-            }
             self.podcasts = podcasts
             if(!self.podcasts.isEmpty){
                 self.collectionView.reloadData()

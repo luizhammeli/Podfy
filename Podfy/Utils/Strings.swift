@@ -32,6 +32,7 @@ class Strings{
     static let signUp = "Sign Up"
     static let settings = "Settings"
     static let networkErrorMessage = "Please check your network connection."
+    static let networkErrorTitle = "Network Error."
     
     //MARK: JSON Fields
     static let trackName = "trackName"
