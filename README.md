@@ -12,6 +12,7 @@ O Podfy é um aplicativo que utiliza a API de busca de Podcasts disponíveis no 
 <img height="35%" width="35%" vspace="20" hspace="20" src="https://user-images.githubusercontent.com/12848020/42481590-8dec5806-83b9-11e8-8630-2dcdc3b4c3d5.png" />
 <img height="35%" width="35%" vspace="20" hspace="20" src="https://user-images.githubusercontent.com/12848020/42481778-81514b64-83ba-11e8-875f-7256ac6cdcfd.png" />
   <img height="35%" width="35%" vspace="20" hspace="20" src="https://user-images.githubusercontent.com/12848020/42481840-d2a85606-83ba-11e8-8eba-93f812d413ce.png" />
+  
 </p>
 
 ## Arquitetura do Projeto
